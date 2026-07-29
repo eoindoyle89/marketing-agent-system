@@ -25,6 +25,16 @@ architecture, shared read protocol, and company-context governance model.
   - `programmatic-seo`
   - `schema`
   - `competitors`
+- Adapted skills in Wave 3:
+  - `ads`
+  - `ad-creative`
+  - `ab-testing`
+  - `analytics`
+  - `cro`
+  - `signup`
+  - `onboarding`
+  - `paywalls`
+  - `popups`
 
 ## Original / No Direct Installed Match Found
 

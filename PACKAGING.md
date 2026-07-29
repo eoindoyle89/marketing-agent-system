@@ -70,28 +70,28 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `seo-audit` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `seo-audit` | Context protocol wired; references copied; third-party notice added. |
-| `ai-seo` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `ai-seo` | Context protocol wired; references copied; platform claims need currentness review before push. |
-| `site-architecture` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `site-architecture` | Context protocol wired; references copied; third-party notice added. |
-| `programmatic-seo` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `programmatic-seo` | Context protocol wired; references copied; third-party notice added. |
-| `schema` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `schema-markup` | Context protocol wired; references copied; third-party notice added. |
-| `aso` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; app-store specs and benchmarks need currentness review before push. |
-| `directory-submissions` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; directory list and AI-search claims need currentness review before push. |
-| `competitors` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `competitor-alternatives` | Context protocol wired; references copied; third-party notice added. |
+| `seo-audit` | Personal Vault | Published in `a175f64` | High overlap with Apache-2.0 installed `seo-audit` | Context protocol wired; references copied; third-party notice added. |
+| `ai-seo` | Personal Vault | Published in `a175f64` | High overlap with Apache-2.0 installed `ai-seo` | Context protocol wired; references copied; platform claims need currentness review before future revisions. |
+| `site-architecture` | Personal Vault | Published in `a175f64` | High overlap with Apache-2.0 installed `site-architecture` | Context protocol wired; references copied; third-party notice added. |
+| `programmatic-seo` | Personal Vault | Published in `a175f64` | High overlap with Apache-2.0 installed `programmatic-seo` | Context protocol wired; references copied; third-party notice added. |
+| `schema` | Personal Vault | Published in `a175f64` | High overlap with Apache-2.0 installed `schema-markup` | Context protocol wired; references copied; third-party notice added. |
+| `aso` | Personal Vault | Published in `a175f64` | No direct installed match found | Context protocol wired; references copied; app-store specs and benchmarks need currentness review before future revisions. |
+| `directory-submissions` | Personal Vault | Published in `a175f64` | No direct installed match found | Context protocol wired; references copied; directory list and AI-search claims need currentness review before future revisions. |
+| `competitors` | Personal Vault | Published in `a175f64` | High overlap with Apache-2.0 installed `competitor-alternatives` | Context protocol wired; references copied; third-party notice added. |
 
 ### Wave 3: Paid, Conversion, And Measurement
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `ads` | Personal Vault | Not packaged | Similar to installed `paid-ads` | Needs budget, goals, channel, and approval gates. |
-| `ad-creative` | Personal Vault | Not packaged | Similar to installed `ad-creative` | Large reference set; package after context contract is proven. |
-| `ab-testing` | Personal Vault | Not packaged | Similar to installed `ab-test-setup` | Needs metrics/funnel and experiment-history reads. |
-| `analytics` | Personal Vault | Not packaged | Similar to installed `analytics-tracking` | Keep tool claims current and source system boundaries clear. |
-| `cro` | Personal Vault | Not packaged | Similar to installed `page-cro` | Needs public-asset audit, funnel, campaign, and QA reads. |
-| `signup` | Personal Vault | Not packaged | No direct installed match found | Connect to product funnel and activation context. |
-| `onboarding` | Personal Vault | Not packaged | Similar to installed `onboarding-cro` | Connect to product capabilities and activation metrics. |
-| `paywalls` | Personal Vault | Not packaged | Similar to installed `paywall-upgrade-cro` | Needs pricing and offer boundaries. |
-| `popups` | Personal Vault | Not packaged | Similar to installed `popup-cro` | Needs channel and consent/compliance rules. |
+| `ads` | Personal Vault | Packaged locally, not published | Similar to Apache-2.0 installed `paid-ads`; SKILL.md overlap ~52% | Context protocol wired; references copied; broken local tool registry links removed; budget, tracking, and approval gates added. |
+| `ad-creative` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `ad-creative`; SKILL.md overlap ~74% | Context protocol wired; references and asset copied; broken local tool registry links removed; creative approval boundary added. |
+| `ab-testing` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `ab-test-setup`; SKILL.md overlap ~96% | Context protocol wired; references copied; metrics, funnel, and QA reads added. |
+| `analytics` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `analytics-tracking`; SKILL.md overlap ~94% | Context protocol wired; references copied; broken local tool registry links removed; source-system boundaries added. |
+| `cro` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `page-cro`; SKILL.md overlap ~81% | Context protocol wired; references copied; form reference made agent-neutral. |
+| `signup` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `signup-flow-cro`; SKILL.md overlap ~95% | Context protocol wired; product funnel, activation, and QA reads added. |
+| `onboarding` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `onboarding-cro`; SKILL.md overlap ~91% | Context protocol wired; product capabilities, activation, and lifecycle reads added. |
+| `paywalls` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `paywall-upgrade-cro`; SKILL.md overlap ~91% | Context protocol wired; pricing, entitlement, and QA reads added. |
+| `popups` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `popup-cro`; SKILL.md overlap ~96% | Context protocol wired; channel, consent, frequency, and measurement reads added. |
 
 ### Wave 4: Lifecycle, Growth, And GTM
 
