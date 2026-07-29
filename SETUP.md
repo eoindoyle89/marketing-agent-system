@@ -15,7 +15,7 @@ You do not need to know GitHub before using this system. The
 4. Creates `.agent-context/`.
 5. Creates `.agent-context/inbox/` and `.agent-context/attachments/`.
 6. Verifies the folder structure.
-7. Audits your public website and public-facing assets first.
+7. Audits your public website, social accounts, and public-facing assets first.
 8. Shows what the market can already see.
 9. Then asks for private/internal source material.
 10. Presents contradictions and information gaps.
@@ -29,7 +29,7 @@ marketing context.
 
 It will:
 
-1. Ask for your website and public-facing assets.
+1. Ask for your website, social accounts, and public-facing assets.
 2. Index public assets in `.agent-context/sources.md`.
 3. Summarize observed public messaging in
    `.agent-context/public-asset-audit.md`.

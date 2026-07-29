@@ -253,8 +253,11 @@ Ask for the company's:
 
 - primary website URL;
 - product, pricing, case study, blog, resources, and about pages;
-- LinkedIn company page and founder/executive profiles, if relevant;
-- YouTube, podcast, webinar, newsletter, or community pages, if relevant;
+- public social media accounts, including LinkedIn, X/Twitter, Instagram,
+  Facebook, TikTok, YouTube, Reddit, Discord, Slack community pages, podcast
+  pages, newsletter archives, and community pages, if relevant;
+- founder, executive, employee-advocate, or subject-matter-expert social
+  profiles that represent the company publicly;
 - competitor names or comparison pages, if already known.
 
 Ask only for the assets the user knows. Do not make the user find everything.
@@ -274,11 +277,20 @@ For every public asset reviewed:
    - observed proof;
    - offers and calls to action;
    - channel patterns;
+   - social media account positioning;
+   - recurring social content themes;
+   - social proof and engagement signals;
+   - founder or spokesperson narrative;
    - contradictions or gaps;
    - needs user confirmation.
 
 Do not copy long passages from public pages. Summarize and use short excerpts
 only when wording itself matters.
+
+For social media accounts, review the public profile/bio, pinned or featured
+posts, recent posts, recurring content formats, visible audience reactions, and
+links out to owned assets. Do not treat likes, comments, follower counts, or
+viral posts as proof of business impact unless supported by an approved source.
 
 At the end of the public audit, present a concise public-readout before asking
 for private/internal material:
@@ -290,6 +302,8 @@ Public readout:
 - Apparent positioning:
 - Apparent proof:
 - Apparent offers/CTAs:
+- Social channels and visible content patterns:
+- Founder/spokesperson narrative:
 - Missing or unclear:
 - Risks if agents used only public info:
 ```
