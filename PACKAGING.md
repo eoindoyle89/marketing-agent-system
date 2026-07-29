@@ -114,17 +114,17 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `prospecting` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; tool-registry links and CLI references removed; lawful-basis, platform-terms, and no-contact gates added. |
-| `revops` | Personal Vault | Packaged locally, not published | Similar to installed `revops` | Context protocol wired; references copied; tool-registry links removed; system-of-record and no-live-change gates added. |
-| `sales-enablement` | Personal Vault | Packaged locally, not published | Similar to installed `sales-enablement` | Context protocol wired; references copied; tool-registry link removed; proof-limit and permission gates added. |
-| `public-relations` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; media-list storage moved to `.agent-context/attachments/`; outlet lists marked as currentness-check examples; no-pitch boundary added. |
-| `image` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; rights-confirmation gate added. |
-| `video` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; local tool links removed; vendor claims marked time-sensitive. |
-| `marketing-ideas` | Personal Vault | Packaged locally, not published | Similar to installed `marketing-ideas` | Context protocol wired; references copied; goals/capacity scoring gate added. |
-| `marketing-psychology` | Personal Vault | Packaged locally, not published | Similar to installed `marketing-psychology` | Context protocol wired; behavioural-claims-as-heuristics boundary added. |
-| `marketing-council` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; advisor dossiers reviewed: source-attributed, simulation-labeled, non-affiliation note added; custom advisors moved to `.agent-context/advisors/`. |
-| `marketing-plan` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; home-directory paths made workspace-relative; product-marketing cross-references replaced with `marketing-system-setup`; local note-tool references neutralized. |
-| `marketing-loops` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; loop state moved to `.agent-context/loops/`; runtime-specific scheduling references made agent-neutral; approval gates on externally-visible loop actions. |
+| `prospecting` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; references copied; tool-registry links and CLI references removed; lawful-basis, platform-terms, and no-contact gates added. |
+| `revops` | Personal Vault | Published in `a0ee1c9` | Similar to installed `revops` | Context protocol wired; references copied; tool-registry links removed; system-of-record and no-live-change gates added. |
+| `sales-enablement` | Personal Vault | Published in `a0ee1c9` | Similar to installed `sales-enablement` | Context protocol wired; references copied; tool-registry link removed; proof-limit and permission gates added. |
+| `public-relations` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; references copied; media-list storage moved to `.agent-context/attachments/`; outlet lists marked as currentness-check examples; no-pitch boundary added. |
+| `image` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; references copied; rights-confirmation gate added. |
+| `video` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; references copied; local tool links removed; vendor claims marked time-sensitive. |
+| `marketing-ideas` | Personal Vault | Published in `a0ee1c9` | Similar to installed `marketing-ideas` | Context protocol wired; references copied; goals/capacity scoring gate added. |
+| `marketing-psychology` | Personal Vault | Published in `a0ee1c9` | Similar to installed `marketing-psychology` | Context protocol wired; behavioural-claims-as-heuristics boundary added. |
+| `marketing-council` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; advisor dossiers reviewed: source-attributed, simulation-labeled, non-affiliation note added; custom advisors moved to `.agent-context/advisors/`. |
+| `marketing-plan` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; references copied; home-directory paths made workspace-relative; product-marketing cross-references replaced with `marketing-system-setup`; local note-tool references neutralized. |
+| `marketing-loops` | Personal Vault | Published in `a0ee1c9` | No direct installed match found | Context protocol wired; references copied; loop state moved to `.agent-context/loops/`; runtime-specific scheduling references made agent-neutral; approval gates on externally-visible loop actions. |
 | `product-marketing` | Personal Vault | Dropped | No direct installed match found | Superseded by `marketing-system-setup`, which ingests legacy context files (e.g. an old `product-marketing.md`) as a source pool. Not packaged, by owner decision. |
 
 ## Wave 4 Provenance Review
@@ -157,9 +157,9 @@ owner decision as superseded by `marketing-system-setup`.
 
 ## Current Packaging Decision
 
-Waves 1-4 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`). Wave 5
-is fully resolved: eleven skills packaged, `product-marketing` dropped as
-superseded. Do not push future packaged skills until:
+Waves 1-5 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`,
+`a0ee1c9`); `product-marketing` was dropped as superseded. All packaging waves
+are complete. Do not push future packaged skills until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;
