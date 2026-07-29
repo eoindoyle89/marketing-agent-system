@@ -13,9 +13,9 @@ Before producing ad creative, read `../shared/context-read-protocol.md` and
 follow it.
 
 Use `.agent-context/INDEX.md` as the primary company context source when a
-context store is available. Treat ad creative work as requiring both the
-`Brand, voice, and content production` and `Paid media, conversion, and
-measurement` task families.
+context store is available. Treat ad creative work as requiring the `Ads and
+creative` task family, adding `Content strategy, copy, social, email, PR`
+reads for copy-heavy creative.
 
 Load these context documents before asking questions:
 

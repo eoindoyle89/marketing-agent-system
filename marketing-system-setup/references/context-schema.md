@@ -77,7 +77,7 @@ truth.
 - `changelog.md`: approved changes to canonical context.
 - `INDEX.md`: read protocol, task routing, file status, claim rules, and
   publishing rules.
-- `../shared/context-read-protocol.md`: shared downstream read contract that
+- `../../shared/context-read-protocol.md`: shared downstream read contract that
   `INDEX.md` points agents toward.
 
 ## Cross-File Rules

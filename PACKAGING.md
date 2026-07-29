@@ -83,15 +83,15 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `ads` | Personal Vault | Packaged locally, not published | Similar to Apache-2.0 installed `paid-ads`; SKILL.md overlap ~52% | Context protocol wired; references copied; broken local tool registry links removed; budget, tracking, and approval gates added. |
-| `ad-creative` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `ad-creative`; SKILL.md overlap ~74% | Context protocol wired; references and asset copied; broken local tool registry links removed; creative approval boundary added. |
-| `ab-testing` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `ab-test-setup`; SKILL.md overlap ~96% | Context protocol wired; references copied; metrics, funnel, and QA reads added. |
-| `analytics` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `analytics-tracking`; SKILL.md overlap ~94% | Context protocol wired; references copied; broken local tool registry links removed; source-system boundaries added. |
-| `cro` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `page-cro`; SKILL.md overlap ~81% | Context protocol wired; references copied; form reference made agent-neutral. |
-| `signup` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `signup-flow-cro`; SKILL.md overlap ~95% | Context protocol wired; product funnel, activation, and QA reads added. |
-| `onboarding` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `onboarding-cro`; SKILL.md overlap ~91% | Context protocol wired; product capabilities, activation, and lifecycle reads added. |
-| `paywalls` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `paywall-upgrade-cro`; SKILL.md overlap ~91% | Context protocol wired; pricing, entitlement, and QA reads added. |
-| `popups` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `popup-cro`; SKILL.md overlap ~96% | Context protocol wired; channel, consent, frequency, and measurement reads added. |
+| `ads` | Personal Vault | Published in `524472b` | Similar to Apache-2.0 installed `paid-ads`; SKILL.md overlap ~52% | Context protocol wired; references copied; broken local tool registry links removed; budget, tracking, and approval gates added. |
+| `ad-creative` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `ad-creative`; SKILL.md overlap ~74% | Context protocol wired; references and asset copied; broken local tool registry links removed; creative approval boundary added. |
+| `ab-testing` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `ab-test-setup`; SKILL.md overlap ~96% | Context protocol wired; references copied; metrics, funnel, and QA reads added. |
+| `analytics` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `analytics-tracking`; SKILL.md overlap ~94% | Context protocol wired; references copied; broken local tool registry links removed; source-system boundaries added. |
+| `cro` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `page-cro`; SKILL.md overlap ~81% | Context protocol wired; references copied; form reference made agent-neutral. |
+| `signup` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `signup-flow-cro`; SKILL.md overlap ~95% | Context protocol wired; product funnel, activation, and QA reads added. |
+| `onboarding` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `onboarding-cro`; SKILL.md overlap ~91% | Context protocol wired; product capabilities, activation, and lifecycle reads added. |
+| `paywalls` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `paywall-upgrade-cro`; SKILL.md overlap ~91% | Context protocol wired; pricing, entitlement, and QA reads added. |
+| `popups` | Personal Vault | Published in `524472b` | High overlap with Apache-2.0 installed `popup-cro`; SKILL.md overlap ~96% | Context protocol wired; channel, consent, frequency, and measurement reads added. |
 
 ### Wave 4: Lifecycle, Growth, And GTM
 
@@ -129,7 +129,8 @@ context model.
 
 ## Current Packaging Decision
 
-Wave 1 is packaged locally. Do not push packaged skills until:
+Waves 1-3 are published (`beb4539`, `a175f64`, `524472b`). Do not push
+future packaged skills until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;

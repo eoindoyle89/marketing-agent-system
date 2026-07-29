@@ -23,9 +23,10 @@ The broader goal is a marketing-agent system: shared company context, specialist
 Phase 2 foundation in progress: `marketing-system-setup` owns information-store
 provisioning and a source-backed context build across company, product,
 customer, competitive, commercial, measurement, brand, production, evidence,
-and governance domains. The expanded local contract has not yet been published.
-The shared `.agent-context/INDEX.md` read protocol is defined locally in
-[`shared/context-read-protocol.md`](shared/context-read-protocol.md).
+and governance domains. The shared `.agent-context/INDEX.md` read protocol is
+defined in [`shared/context-read-protocol.md`](shared/context-read-protocol.md).
+Packaged downstream marketing skills are tracked by wave in
+[`PACKAGING.md`](PACKAGING.md); Waves 1-3 are published.
 
 ## Setup
 

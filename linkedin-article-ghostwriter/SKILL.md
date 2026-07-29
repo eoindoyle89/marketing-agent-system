@@ -72,23 +72,24 @@ context unless the user explicitly says this task should use an exception.
 ```
 THE READER: [Who is the one person this article must be worth reading for?
   Be specific: role, organization type, what they already believe.
-  Example: "Director of Sport at a US competitive youth soccer club,
-  a former coach, skeptical of anything that smells like wellness."]
+  Example: "Head of Operations at a mid-market logistics company,
+  a former dispatcher, skeptical of software promises."]
 
 THE AUTHORS: [One block per person you ghostwrite for.]
   - Name:
     Credibility: [what makes this person worth listening to]
-    Sounds like: [register, person, texture. Example: "a coach talking
-    to another coach, first person, touchline stories"]
+    Sounds like: [register, person, texture. Example: "an operator talking
+    to another operator, first person, warehouse-floor stories"]
     Native territory: [subjects this person can speak on without
     explanation, and subjects they can't]
 
 THE LEAD FRAME: [What every article must lead with, and what it must
-  never lead with. Example: "lead with competitive performance;
-  never lead with wellbeing, even though wellbeing is a real outcome."]
+  never lead with. Example: "lead with on-time delivery;
+  never lead with sustainability, even though sustainability is a real
+  outcome."]
 
 THE MECHANISM TERM: [The category word for how your product works.
-  It explains, it never headlines. Example: "emotional intelligence."]
+  It explains, it never headlines. Example: "route intelligence."]
 
 DIALECT: [US or UK English.]
 

@@ -110,6 +110,8 @@ All external-facing drafting agents also read:
 
 | File | Owner | Status | Last updated | Review due |
 |---|---|---|---|---|
+| `sources.md` |  | Draft |  |  |
+| `public-asset-audit.md` |  | Draft |  |  |
 | `company-context.md` |  | Draft |  |  |
 | `positioning-and-icp.md` |  | Draft |  |  |
 | `customer-research-and-voc.md` |  | Draft |  |  |
@@ -119,12 +121,15 @@ All external-facing drafting agents also read:
 | `goals-metrics-and-funnel.md` |  | Draft |  |  |
 | `marketing-operations.md` |  | Draft |  |  |
 | `brand-voice.md` |  | Draft |  |  |
+| `anti-ai-writing-rules.md` |  | Draft |  |  |
 | `visual-identity-and-assets.md` |  | Draft |  |  |
 | `proof-points.md` |  | Draft |  |  |
 | `case-studies.md` |  | Draft |  |  |
 | `channel-rules.md` |  | Draft |  |  |
 | `campaign-history.md` |  | Draft |  |  |
 | `qa-policy.md` |  | Draft |  |  |
+| `open-questions.md` |  | Draft |  |  |
+| `changelog.md` |  | Draft |  |  |
 
 ## Claim Rules
 

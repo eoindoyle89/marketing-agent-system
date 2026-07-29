@@ -13,8 +13,8 @@ Before designing paywalls or upgrade prompts, read
 `../shared/context-read-protocol.md` and follow it.
 
 Use `.agent-context/INDEX.md` as the primary company context source when a
-context store is available. Treat paywall work as requiring the `Paid media,
-conversion, and measurement` task family.
+context store is available. Treat paywall work as requiring the `CRO, signup,
+onboarding, paywalls, churn` task family.
 
 Load these context documents before asking questions:
 
