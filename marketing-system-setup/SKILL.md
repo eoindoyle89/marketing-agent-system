@@ -28,15 +28,19 @@ verification assistant, and governance layer.
 1. Never treat chat memory as company truth.
 2. Company truth lives in `.agent-context/`.
 3. Public-facing assets are source material, not automatic truth.
-4. Do not assume the user understands GitHub, Git, cloning, repositories, or
+4. Review public-facing information before requesting private/internal source
+   material, so the setup starts from what the market can already see.
+5. Present contradictions between public assets, private sources, and user
+   answers before drafting canonical context.
+6. Do not assume the user understands GitHub, Git, cloning, repositories, or
    folder structure.
-5. Ask staged questions. Do not dump a full questionnaire.
-6. Label inferred facts as `Unverified` until the user confirms them.
-7. Promote claims only when they have source, status, and allowed wording.
-8. Do not publish, send, submit, or externally act.
-9. Resume, CV, job-application, and personal career-document work is out of
+7. Ask staged questions. Do not dump a full questionnaire.
+8. Label inferred facts as `Unverified` until the user confirms them.
+9. Promote claims only when they have source, status, and allowed wording.
+10. Do not publish, send, submit, or externally act.
+11. Resume, CV, job-application, and personal career-document work is out of
    scope.
-10. Commit or push changes only when the user explicitly approves.
+12. Commit or push changes only when the user explicitly approves.
 
 ## Stage 0: Provision The Information Store
 
@@ -191,8 +195,9 @@ Tell the user:
 > Add files to `.agent-context/inbox/`, then tell me when they are there. I will
 > verify the folder before reading them.
 
-Do not continue into Stage 1 until the user confirms they have added sources or
-explicitly chooses to start from public assets only.
+Do not require private sources before Stage 1 starts. Stage 1 begins with the
+public audit. Ask the user to add private/internal sources only after the
+public audit summary has been written.
 
 ### Step 0.7: Stage 0 Completion Check
 
@@ -235,13 +240,12 @@ Before gathering context, verify:
   `anti-ai-writing-rules.md`, `proof-points.md`, `case-studies.md`,
   `public-asset-audit.md`, `channel-rules.md`, `qa-policy.md`,
   `campaign-history.md`, `open-questions.md`, and `changelog.md` exist;
-- `inbox/` and `attachments/` exist;
-- the user has either added files to `inbox/` or explicitly chosen to start
-  from public assets only.
+- `inbox/` and `attachments/` exist.
 
 If any required file is missing, recreate it from the template before
-continuing. If the user has not added sources and has not approved
-public-assets-only setup, stop and ask them to choose.
+continuing. Do not request private/internal files yet. The first context source
+must be public information unless the company has no public presence or the
+user explicitly instructs otherwise.
 
 ### Step 1.2: Collect Public Assets
 
@@ -276,9 +280,52 @@ For every public asset reviewed:
 Do not copy long passages from public pages. Summarize and use short excerpts
 only when wording itself matters.
 
-### Step 1.4: Read The Inbox
+At the end of the public audit, present a concise public-readout before asking
+for private/internal material:
 
-Read `.agent-context/inbox/` after the user confirms files are present.
+```text
+Public readout:
+- What the market currently sees:
+- Apparent ICP:
+- Apparent positioning:
+- Apparent proof:
+- Apparent offers/CTAs:
+- Missing or unclear:
+- Risks if agents used only public info:
+```
+
+Then ask:
+
+> What private/internal sources should I read to confirm, correct, or add
+> context to this public picture?
+
+### Step 1.4: Request And Read Private/Internal Sources
+
+Ask the user to add private/internal material to `.agent-context/inbox/` only
+after the public readout is complete.
+
+Useful private/internal sources include:
+
+- brand guidelines;
+- sales decks;
+- product decks;
+- pitch decks;
+- customer quotes;
+- case studies;
+- proof screenshots;
+- analytics exports;
+- prior campaigns;
+- email and LinkedIn examples;
+- product docs;
+- pricing docs;
+- customer research;
+- support themes;
+- approved claims lists.
+
+Read `.agent-context/inbox/` after the user confirms files are present. If the
+user chooses not to add private/internal sources, record `Private sources not
+provided during setup` in `open-questions.md` and continue with public-only
+limitations.
 
 For every file:
 
@@ -292,7 +339,34 @@ For every file:
 If a file cannot be read, add it to `open-questions.md` with the reason and
 ask the user how to handle it.
 
-### Step 1.5: Build A Source Map Before Drafting
+### Step 1.5: Present Contradictions And Information Gaps
+
+Compare:
+
+- public asset observations;
+- private/internal source material;
+- existing context files, if any;
+- direct user answers from the current setup session.
+
+Present contradictions before interviewing further:
+
+```text
+Contradiction and gap report:
+- Public says / implies:
+- Private source says / implies:
+- Current context says:
+- Risk:
+- Question for user:
+```
+
+Ask targeted questions to resolve the highest-risk contradictions first. Do not
+ask the user to confirm everything. Focus on facts that would affect
+positioning, ICP, proof, claims, brand voice, offers, or approval rules.
+
+Record unresolved contradictions in `open-questions.md`. Mark related claims
+`Contradicted` or `Unverified` in `proof-points.md` until resolved.
+
+### Step 1.6: Build A Source Map Before Drafting
 
 Before writing context files, produce a short source map in the chat:
 
@@ -308,7 +382,7 @@ Source map:
 Then ask the user what looks wrong or missing. Do not draft canonical context
 until the source map has been shown.
 
-### Step 1.6: Interview In Stages
+### Step 1.7: Interview In Stages
 
 Interview the user one section at a time. Ask 2-5 questions per stage, then
 summarize what you heard and ask what needs correcting before moving on.
@@ -327,7 +401,7 @@ Ask for examples and exact customer language whenever possible. If the user
 does not know an answer, record it in `open-questions.md`; do not fill the gap
 from model memory.
 
-### Step 1.7: Draft Context Files One At A Time
+### Step 1.8: Draft Context Files One At A Time
 
 Draft each file from source-backed observations and user-confirmed answers.
 
@@ -358,7 +432,7 @@ Use this file routing:
 After each file draft, ask the user to approve, correct, or mark sections as
 unknown. Save corrected content before starting the next file.
 
-### Step 1.8: Promote Claims Safely
+### Step 1.9: Promote Claims Safely
 
 Use `proof-points.md` as the only place where public-facing claims are
 approved.
@@ -376,7 +450,7 @@ Never promote a claim from `Unverified` to `Approved` without explicit user
 confirmation. If public assets and internal sources conflict, mark the claim
 `Contradicted` and add the contradiction to `open-questions.md`.
 
-### Step 1.9: Write Downstream Routing Rules
+### Step 1.10: Write Downstream Routing Rules
 
 Update `INDEX.md` so downstream agents know what to read:
 
@@ -391,7 +465,7 @@ Update `INDEX.md` so downstream agents know what to read:
 - no agent may publish, send, submit, or externally act without explicit human
   approval.
 
-### Step 1.10: Finish With A Setup Summary
+### Step 1.11: Finish With A Setup Summary
 
 End Stage 1 with:
 
@@ -405,6 +479,8 @@ Facts promoted:
 Approved claims:
 Use-with-boundary claims:
 Unverified or blocked claims:
+Contradictions resolved:
+Contradictions still open:
 Open questions:
 Recommended next agent:
 ```

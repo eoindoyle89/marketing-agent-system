@@ -14,11 +14,13 @@ You do not need to know GitHub before using this system. The
    available yet.
 4. Creates `.agent-context/`.
 5. Creates `.agent-context/inbox/` and `.agent-context/attachments/`.
-6. Tells you exactly what raw materials to add.
-7. Verifies the folder structure before reading files.
-8. Audits your public website and public-facing assets.
-9. Interviews you in stages.
-10. Writes durable context files that downstream marketing agents read.
+6. Verifies the folder structure.
+7. Audits your public website and public-facing assets first.
+8. Shows what the market can already see.
+9. Then asks for private/internal source material.
+10. Presents contradictions and information gaps.
+11. Interviews you in stages.
+12. Writes durable context files that downstream marketing agents read.
 
 ## Stage 1 Context Build
 
@@ -28,18 +30,23 @@ marketing context.
 It will:
 
 1. Ask for your website and public-facing assets.
-2. Index public assets and files from `.agent-context/inbox/` in
-   `.agent-context/sources.md`.
+2. Index public assets in `.agent-context/sources.md`.
 3. Summarize observed public messaging in
    `.agent-context/public-asset-audit.md`.
-4. Show a source map before drafting canonical context.
-5. Interview you in stages instead of sending a giant questionnaire.
-6. Draft one context file at a time.
-7. Ask before promoting inferred facts.
-8. Put public-facing claims in `.agent-context/proof-points.md` with source,
+4. Show a public readout before requesting private/internal material.
+5. Ask you to add private/internal files to `.agent-context/inbox/`.
+6. Index private/internal files in `.agent-context/sources.md`.
+7. Present contradictions between public assets, private sources, and current
+   context.
+8. Ask targeted questions to resolve high-risk gaps.
+9. Show a source map before drafting canonical context.
+10. Interview you in stages instead of sending a giant questionnaire.
+11. Draft one context file at a time.
+12. Ask before promoting inferred facts.
+13. Put public-facing claims in `.agent-context/proof-points.md` with source,
    status, allowed wording, and forbidden overclaims.
-9. Store reusable case studies in `.agent-context/case-studies.md`.
-10. Write downstream read rules in `.agent-context/INDEX.md`.
+14. Store reusable case studies in `.agent-context/case-studies.md`.
+15. Write downstream read rules in `.agent-context/INDEX.md`.
 
 Public assets are treated as observations. They are not automatically approved
 company truth.
