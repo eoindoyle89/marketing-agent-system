@@ -60,6 +60,15 @@ marketing-system-setup  ──►  .agent-context/   (private company store)
 Packaging status, provenance flags, and per-skill notes are tracked in
 [`PACKAGING.md`](PACKAGING.md).
 
+## Example
+
+[`examples/quietude/`](examples/quietude/) is a complete fictional example:
+a populated `.agent-context/` store and a
+[worked example](examples/quietude/worked-example.md) that follows one
+article from raw inputs through the ghostwriter, the review gate, and a
+recorded human approval. The reasoning behind the architecture is written up
+in [docs/why-durable-context.md](docs/why-durable-context.md).
+
 ## Setup
 
 Start with [SETUP.md](SETUP.md), then run the
