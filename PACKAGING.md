@@ -97,18 +97,18 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `emails` | Personal Vault | Packaged locally, not published | Similar to installed `email-sequence` | Context protocol wired; references copied; tool-registry links removed; consent, offer, and send-approval gates added. |
-| `cold-email` | Personal Vault | Packaged locally, not published | Similar to installed `cold-email` | Context protocol wired; references copied; compliance/lawful-basis gate and no-send boundary added. |
-| `sms` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; tool-registry links removed; consent, quiet-hours, and no-send gates added; opt-in template links made placeholders. |
-| `churn-prevention` | Personal Vault | Packaged locally, not published | Similar to installed `churn-prevention` | Context protocol wired; references copied; tool-registry links and CLI-tool table removed; billing/entitlement and save-offer authority gates added. |
-| `referrals` | Personal Vault | Packaged locally, not published | Similar to installed `referral-program` | Context protocol wired; references copied; tool-registry links removed; incentive budget, legal/tax, and offers-ledger gates added. |
-| `co-marketing` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; tool-registry links removed; partner permission, brand-use, and no-contact boundaries added. |
-| `community-marketing` | Personal Vault | Packaged locally, not published | Similar to installed `community-marketing` | Context protocol wired; moderation-capacity and governance gates added; no live posting or moderation. |
-| `launch` | Personal Vault | Packaged locally, not published | Similar to installed `launch-strategy` | Context protocol wired; tool link neutralized; readiness, embargo, and no-publish gates added. |
-| `lead-magnets` | Personal Vault | Packaged locally, not published | Similar to installed `lead-magnets` | Context protocol wired; references copied; data-capture and consent-policy gate added. |
-| `free-tools` | Personal Vault | Packaged locally, not published | Similar to installed `free-tool-strategy` | Context protocol wired; references copied; engineering-capacity and attribution gates added; example list scrubbed. |
-| `offers` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; offers-ledger, proof-limit, and approval-authority gates added. |
-| `pricing` | Personal Vault | Packaged locally, not published | Similar to installed `pricing-strategy` | Context protocol wired; references copied; pricing-authority and effective-date gates added. |
+| `emails` | Personal Vault | Published in `1345fb5` | Similar to installed `email-sequence` | Context protocol wired; references copied; tool-registry links removed; consent, offer, and send-approval gates added. |
+| `cold-email` | Personal Vault | Published in `1345fb5` | Similar to installed `cold-email` | Context protocol wired; references copied; compliance/lawful-basis gate and no-send boundary added. |
+| `sms` | Personal Vault | Published in `1345fb5` | No direct installed match found | Context protocol wired; references copied; tool-registry links removed; consent, quiet-hours, and no-send gates added; opt-in template links made placeholders. |
+| `churn-prevention` | Personal Vault | Published in `1345fb5` | Similar to installed `churn-prevention` | Context protocol wired; references copied; tool-registry links and CLI-tool table removed; billing/entitlement and save-offer authority gates added. |
+| `referrals` | Personal Vault | Published in `1345fb5` | Similar to installed `referral-program` | Context protocol wired; references copied; tool-registry links removed; incentive budget, legal/tax, and offers-ledger gates added. |
+| `co-marketing` | Personal Vault | Published in `1345fb5` | No direct installed match found | Context protocol wired; tool-registry links removed; partner permission, brand-use, and no-contact boundaries added. |
+| `community-marketing` | Personal Vault | Published in `1345fb5` | Similar to installed `community-marketing` | Context protocol wired; moderation-capacity and governance gates added; no live posting or moderation. |
+| `launch` | Personal Vault | Published in `1345fb5` | Similar to installed `launch-strategy` | Context protocol wired; tool link neutralized; readiness, embargo, and no-publish gates added. |
+| `lead-magnets` | Personal Vault | Published in `1345fb5` | Similar to installed `lead-magnets` | Context protocol wired; references copied; data-capture and consent-policy gate added. |
+| `free-tools` | Personal Vault | Published in `1345fb5` | Similar to installed `free-tool-strategy` | Context protocol wired; references copied; engineering-capacity and attribution gates added; example list scrubbed. |
+| `offers` | Personal Vault | Published in `1345fb5` | No direct installed match found | Context protocol wired; references copied; offers-ledger, proof-limit, and approval-authority gates added. |
+| `pricing` | Personal Vault | Published in `1345fb5` | Similar to installed `pricing-strategy` | Context protocol wired; references copied; pricing-authority and effective-date gates added. |
 
 ### Wave 5: Sales, Ops, Creative, And Strategy
 
@@ -139,15 +139,15 @@ Wave 4 provenance flags are therefore carried over from the earlier local
 comparison pass, not re-measured. The nine flagged skills (`emails`,
 `cold-email`, `churn-prevention`, `referrals`, `community-marketing`,
 `launch`, `lead-magnets`, `free-tools`, `pricing`) are listed in
-`THIRD_PARTY_NOTICES.md` on that basis. Re-run the local line-level
-comparison against the installed claude-cowork marketing plugin before
-publishing Wave 4.
+`THIRD_PARTY_NOTICES.md` on that basis. Wave 4 was published with these
+carried-over flags by explicit owner decision; re-measure against the
+installed claude-cowork marketing plugin if the attribution basis needs
+tightening later.
 
 ## Current Packaging Decision
 
-Waves 1-3 are published (`beb4539`, `a175f64`, `524472b`). Wave 4 is
-packaged locally, pending provenance re-measurement and approval. Do not push
-future packaged skills until:
+Waves 1-4 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`). Do not
+push future packaged skills until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;
