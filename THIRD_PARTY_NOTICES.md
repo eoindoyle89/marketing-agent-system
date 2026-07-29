@@ -47,6 +47,12 @@ architecture, shared read protocol, and company-context governance model.
   - `lead-magnets`
   - `free-tools`
   - `pricing`
+- Skills in Wave 5 flagged as similar to installed Apache-2.0 skills in the
+  pre-packaging local comparison (same carried-over basis as Wave 4):
+  - `revops`
+  - `sales-enablement`
+  - `marketing-ideas`
+  - `marketing-psychology`
 
 ## Original / No Direct Installed Match Found
 
@@ -67,6 +73,17 @@ match in the local comparison pass:
 - `sms`
 - `co-marketing`
 - `offers`
+
+The following Wave 5 skills did not have a direct installed Anthropic skill
+match in the local comparison pass:
+
+- `prospecting`
+- `public-relations`
+- `image`
+- `video`
+- `marketing-plan`
+- `marketing-loops`
+- `marketing-council`
 
 This notice is based on the local plugin cache reviewed during packaging. It is
 not a legal opinion.

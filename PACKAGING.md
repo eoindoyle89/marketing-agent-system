@@ -114,18 +114,18 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `prospecting` | Personal Vault | Not packaged | No direct installed match found | High compliance risk; package late. |
-| `revops` | Personal Vault | Not packaged | Similar to installed `revops` | Needs system-of-record and lifecycle definitions. |
-| `sales-enablement` | Personal Vault | Not packaged | Similar to installed `sales-enablement` | Needs approved claims, case studies, objections. |
-| `public-relations` | Personal Vault | Not packaged | No direct installed match found | Media lists and pitch rules need provenance review. |
-| `image` | Personal Vault | Not packaged | No direct installed match found | Needs visual assets and rights rules. |
-| `video` | Personal Vault | Not packaged | No direct installed match found | Tool/vendor claims may be time-sensitive. |
-| `marketing-ideas` | Personal Vault | Not packaged | Similar to installed `marketing-ideas` | Likely compact, but broad references need review. |
-| `marketing-psychology` | Personal Vault | Not packaged | Similar to installed `marketing-psychology` | Needs claim/source caution for behavioural claims. |
-| `marketing-council` | Personal Vault | Not packaged | No direct installed match found | Named advisor references need careful provenance/transform review. |
-| `marketing-plan` | Personal Vault | Not packaged | No direct installed match found | Large strategy skill with many references; package after foundation wave. |
-| `marketing-loops` | Personal Vault | Not packaged | No direct installed match found | Contains runtime/orchestration assumptions; package late. |
-| `product-marketing` | Personal Vault | Not packaged | No direct installed match found | Likely superseded by `marketing-system-setup`; may become migration helper rather than public skill. |
+| `prospecting` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; tool-registry links and CLI references removed; lawful-basis, platform-terms, and no-contact gates added. |
+| `revops` | Personal Vault | Packaged locally, not published | Similar to installed `revops` | Context protocol wired; references copied; tool-registry links removed; system-of-record and no-live-change gates added. |
+| `sales-enablement` | Personal Vault | Packaged locally, not published | Similar to installed `sales-enablement` | Context protocol wired; references copied; tool-registry link removed; proof-limit and permission gates added. |
+| `public-relations` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; media-list storage moved to `.agent-context/attachments/`; outlet lists marked as currentness-check examples; no-pitch boundary added. |
+| `image` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; rights-confirmation gate added. |
+| `video` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; local tool links removed; vendor claims marked time-sensitive. |
+| `marketing-ideas` | Personal Vault | Packaged locally, not published | Similar to installed `marketing-ideas` | Context protocol wired; references copied; goals/capacity scoring gate added. |
+| `marketing-psychology` | Personal Vault | Packaged locally, not published | Similar to installed `marketing-psychology` | Context protocol wired; behavioural-claims-as-heuristics boundary added. |
+| `marketing-council` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; advisor dossiers reviewed: source-attributed, simulation-labeled, non-affiliation note added; custom advisors moved to `.agent-context/advisors/`. |
+| `marketing-plan` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; home-directory paths made workspace-relative; product-marketing cross-references replaced with `marketing-system-setup`; local note-tool references neutralized. |
+| `marketing-loops` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; loop state moved to `.agent-context/loops/`; runtime-specific scheduling references made agent-neutral; approval gates on externally-visible loop actions. |
+| `product-marketing` | Personal Vault | Dropped | No direct installed match found | Superseded by `marketing-system-setup`, which ingests legacy context files (e.g. an old `product-marketing.md`) as a source pool. Not packaged, by owner decision. |
 
 ## Wave 4 Provenance Review
 
@@ -144,10 +144,22 @@ carried-over flags by explicit owner decision; re-measure against the
 installed claude-cowork marketing plugin if the attribution basis needs
 tightening later.
 
+## Wave 5 Provenance Review
+
+As with Wave 4, the claude-cowork plugin cache used for Wave 1-3 line-level
+comparisons was unavailable in the packaging environment, so Wave 5 provenance
+flags are carried over from the earlier local comparison, not re-measured.
+Four packaged skills carry similar-to-installed flags (`revops`,
+`sales-enablement`, `marketing-ideas`, `marketing-psychology`) and are listed
+in `THIRD_PARTY_NOTICES.md` on that basis. `marketing-council` was packaged
+after owner review of its advisor dossiers; `product-marketing` was dropped by
+owner decision as superseded by `marketing-system-setup`.
+
 ## Current Packaging Decision
 
-Waves 1-4 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`). Do not
-push future packaged skills until:
+Waves 1-4 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`). Wave 5
+is fully resolved: eleven skills packaged, `product-marketing` dropped as
+superseded. Do not push future packaged skills until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;
