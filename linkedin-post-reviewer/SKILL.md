@@ -14,8 +14,8 @@ description: |
 
   Trigger when the user says "review this post", "does this pass", "is this ready to
   publish", "check this before I post it", or pastes a LinkedIn draft and asks for a
-  verdict. Use for short LinkedIn posts. Long-form LinkedIn articles need a
-  separate article review pass.
+  verdict. Use for short LinkedIn posts. Long-form LinkedIn articles use
+  `linkedin-article-reviewer` instead.
 ---
 
 # LinkedIn Post Reviewer

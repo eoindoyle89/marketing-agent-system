@@ -11,5 +11,6 @@ pitches, hook strength, ending, banned language, and dialect.
 It exists because the failure mode of ghostwritten content isn't bad writing.
 Bad writing is easy to catch. The failure mode is writing that sounds on-brand
 while quietly leading with the wrong frame, or landing a pitch in the last line
-where it reads as a conclusion. This reviewer is for short LinkedIn posts; the
-long-form `linkedin-article-ghostwriter` needs a separate article review pass.
+where it reads as a conclusion. This reviewer is for short LinkedIn posts; long-form
+articles from `linkedin-article-ghostwriter` go through
+`linkedin-article-reviewer`.

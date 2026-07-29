@@ -1,37 +1,79 @@
 # marketing-agent-system
 
-Marketing agents and quality gates for AI-assisted production.
+A marketing-agent system: durable company context, a setup agent that builds
+it, 50 specialist marketing skills that read it, and QA gates that keep
+humans in charge of everything public-facing.
 
-This repo starts with a setup agent and two public, company-configurable
-LinkedIn skills:
+The premise: AI chat memory is not company truth. Marketing agents produce
+generic or invented output when the facts they need — positioning, audience,
+proof, voice, channel rules — live nowhere durable. This repo fixes that with
+an architecture, not a prompt.
 
-- `marketing-system-setup` provisions the private company information store,
-  creates `.agent-context/`, guides source-pool selection and source
-  collection, and builds durable marketing context before any production agents
-  run.
-- `linkedin-article-ghostwriter` writes long-form founder or expert LinkedIn
-  articles from a developed content idea, using approved company context,
-  author voice, channel rules, and proof boundaries.
-- `linkedin-post-reviewer` reviews short LinkedIn posts before human approval,
-  checking audience fit, lead frame, voice, product-pitch drift, hook strength,
-  ending quality, banned words, and dialect.
+## How it works
 
-The broader goal is a marketing-agent system: shared company context, specialist agents, production workflows, and QA gates that can scale marketing output without separating speed from judgement.
+```text
+sources (public + private)
+        │
+        ▼
+marketing-system-setup  ──►  .agent-context/   (private company store)
+                                    │
+                                    ▼
+                     shared/context-read-protocol.md
+                                    │
+                                    ▼
+                    specialist skills (draft / analyse / plan)
+                                    │
+                                    ▼
+                    review gates ──► human approval ──► publish
+```
 
-## Status
+- **`marketing-system-setup`** provisions a private company context store
+  (`.agent-context/`, typically a private GitHub repo cloned locally), audits
+  public assets first, reads private sources second, presents contradictions,
+  interviews the user in stages, and writes source-backed context files with
+  claim status and approval metadata. Templates live in
+  [`templates/agent-context/`](templates/agent-context/).
+- **[`shared/context-read-protocol.md`](shared/context-read-protocol.md)** is
+  the contract every downstream skill follows: read `.agent-context/INDEX.md`
+  first, classify the task into a family, load only the required context,
+  respect claim and approval boundaries, and report limitations.
+- **Specialist skills** cover research, strategy, content, search, paid,
+  conversion, lifecycle, sales, ops, and creative. Each declares its task
+  family and required context reads. None publish, send, spend, or contact
+  anyone — they draft and recommend for human approval.
+- **Review gates** like `linkedin-post-reviewer` and
+  `linkedin-article-reviewer` run named, failable tests against approved
+  context before anything reaches a human approver.
 
-Phase 2 foundation in progress: `marketing-system-setup` owns information-store
-provisioning and a source-backed context build across company, product,
-customer, competitive, commercial, measurement, brand, production, evidence,
-and governance domains. The shared `.agent-context/INDEX.md` read protocol is
-defined in [`shared/context-read-protocol.md`](shared/context-read-protocol.md).
-Packaged downstream marketing skills are tracked by wave in
-[`PACKAGING.md`](PACKAGING.md); Waves 1-3 are published.
+## Skill catalog
+
+| Area | Skills |
+|---|---|
+| Setup & governance | marketing-system-setup |
+| Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
+| Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
+| Paid, conversion & measurement | ads, ad-creative, ab-testing, analytics, cro, signup, onboarding, paywalls, popups |
+| Lifecycle, growth & GTM | emails, cold-email, sms, churn-prevention, referrals, co-marketing, community-marketing, launch, lead-magnets, free-tools, offers, pricing |
+| Sales, ops, creative & strategy | prospecting, revops, sales-enablement, public-relations, image, video, marketing-ideas, marketing-psychology, marketing-plan, marketing-loops, marketing-council |
+| Production & review gates | linkedin-article-ghostwriter, linkedin-post-reviewer, linkedin-article-reviewer |
+
+Packaging status, provenance flags, and per-skill notes are tracked in
+[`PACKAGING.md`](PACKAGING.md).
 
 ## Setup
 
 Start with [SETUP.md](SETUP.md), then run the
-[`marketing-system-setup`](marketing-system-setup/) skill.
+[`marketing-system-setup`](marketing-system-setup/) skill. You do not need to
+know GitHub first; the setup agent walks through every step and offers a
+local-only fallback.
+
+## Principles
+
+- Company truth lives in a durable store, never in chat memory.
+- Public assets are observations, not approved facts.
+- Every public-facing claim has provenance, status, and allowed wording.
+- Agents draft, analyse, and recommend; humans approve, publish, and spend.
+- Writing-quality rules are durable context, not model taste.
 
 ## Who I am
 
@@ -40,4 +82,7 @@ Eoin Doyle — marketer and founder who builds with AI.
 
 ## License
 
-[MIT](LICENSE) © Eoin Doyle
+[MIT](LICENSE) © Eoin Doyle. Some skills are adapted from Apache-2.0 licensed
+skills in Anthropic's Cowork marketing plugin — see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and
+[`LICENSES/`](LICENSES/).
