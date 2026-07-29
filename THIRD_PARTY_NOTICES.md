@@ -35,6 +35,18 @@ architecture, shared read protocol, and company-context governance model.
   - `onboarding`
   - `paywalls`
   - `popups`
+- Skills in Wave 4 flagged as similar to installed Apache-2.0 skills in the
+  pre-packaging local comparison (overlap not re-measured in the packaging
+  environment; see `PACKAGING.md` Wave 4 provenance review):
+  - `emails`
+  - `cold-email`
+  - `churn-prevention`
+  - `referrals`
+  - `community-marketing`
+  - `launch`
+  - `lead-magnets`
+  - `free-tools`
+  - `pricing`
 
 ## Original / No Direct Installed Match Found
 
@@ -48,6 +60,13 @@ match in the local comparison pass:
 
 - `aso`
 - `directory-submissions`
+
+The following Wave 4 skills did not have a direct installed Anthropic skill
+match in the local comparison pass:
+
+- `sms`
+- `co-marketing`
+- `offers`
 
 This notice is based on the local plugin cache reviewed during packaging. It is
 not a legal opinion.

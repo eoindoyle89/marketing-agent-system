@@ -97,18 +97,18 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `emails` | Personal Vault | Not packaged | Similar to installed `email-sequence` | Needs channel, consent, proof, and offer gating. |
-| `cold-email` | Personal Vault | Not packaged | Similar to installed `cold-email` | Needs prospecting/compliance boundaries. |
-| `sms` | Personal Vault | Not packaged | No direct installed match found | Consent/compliance rules need special care. |
-| `churn-prevention` | Personal Vault | Not packaged | Similar to installed `churn-prevention` | Needs retention metrics and offer boundaries. |
-| `referrals` | Personal Vault | Not packaged | Similar to installed `referral-program` | Needs offer/ops/legal gates. |
-| `co-marketing` | Personal Vault | Not packaged | No direct installed match found | Needs partner permission and proof boundaries. |
-| `community-marketing` | Personal Vault | Not packaged | Similar to installed `community-marketing` | Needs capacity and channel governance. |
-| `launch` | Personal Vault | Not packaged | Similar to installed `launch-strategy` | Needs product readiness, proof, channels, and campaign history. |
-| `lead-magnets` | Personal Vault | Not packaged | Similar to installed `lead-magnets` | Needs audience, proof, and data-capture policy. |
-| `free-tools` | Personal Vault | Not packaged | Similar to installed `free-tool-strategy` | Needs engineering/resources and attribution rules. |
-| `offers` | Personal Vault | Not packaged | No direct installed match found | Connect to offers/pricing ledger and proof limits. |
-| `pricing` | Personal Vault | Not packaged | Similar to installed `pricing-strategy` | Needs pricing authority and effective dates. |
+| `emails` | Personal Vault | Packaged locally, not published | Similar to installed `email-sequence` | Context protocol wired; references copied; tool-registry links removed; consent, offer, and send-approval gates added. |
+| `cold-email` | Personal Vault | Packaged locally, not published | Similar to installed `cold-email` | Context protocol wired; references copied; compliance/lawful-basis gate and no-send boundary added. |
+| `sms` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; tool-registry links removed; consent, quiet-hours, and no-send gates added; opt-in template links made placeholders. |
+| `churn-prevention` | Personal Vault | Packaged locally, not published | Similar to installed `churn-prevention` | Context protocol wired; references copied; tool-registry links and CLI-tool table removed; billing/entitlement and save-offer authority gates added. |
+| `referrals` | Personal Vault | Packaged locally, not published | Similar to installed `referral-program` | Context protocol wired; references copied; tool-registry links removed; incentive budget, legal/tax, and offers-ledger gates added. |
+| `co-marketing` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; tool-registry links removed; partner permission, brand-use, and no-contact boundaries added. |
+| `community-marketing` | Personal Vault | Packaged locally, not published | Similar to installed `community-marketing` | Context protocol wired; moderation-capacity and governance gates added; no live posting or moderation. |
+| `launch` | Personal Vault | Packaged locally, not published | Similar to installed `launch-strategy` | Context protocol wired; tool link neutralized; readiness, embargo, and no-publish gates added. |
+| `lead-magnets` | Personal Vault | Packaged locally, not published | Similar to installed `lead-magnets` | Context protocol wired; references copied; data-capture and consent-policy gate added. |
+| `free-tools` | Personal Vault | Packaged locally, not published | Similar to installed `free-tool-strategy` | Context protocol wired; references copied; engineering-capacity and attribution gates added; example list scrubbed. |
+| `offers` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; offers-ledger, proof-limit, and approval-authority gates added. |
+| `pricing` | Personal Vault | Packaged locally, not published | Similar to installed `pricing-strategy` | Context protocol wired; references copied; pricing-authority and effective-date gates added. |
 
 ### Wave 5: Sales, Ops, Creative, And Strategy
 
@@ -127,9 +127,26 @@ context model.
 | `marketing-loops` | Personal Vault | Not packaged | No direct installed match found | Contains runtime/orchestration assumptions; package late. |
 | `product-marketing` | Personal Vault | Not packaged | No direct installed match found | Likely superseded by `marketing-system-setup`; may become migration helper rather than public skill. |
 
+## Wave 4 Provenance Review
+
+The claude-cowork marketing plugin cache used for the Wave 1-3 line-level
+comparisons was not available in the environment where Wave 4 was packaged.
+The only installed analogue present (`email-sequence`, from a smaller
+`marketing/1.2.0` plugin) shares only ~6% of non-empty lines with `emails`,
+so it is not the analogue the pre-packaging flags refer to.
+
+Wave 4 provenance flags are therefore carried over from the earlier local
+comparison pass, not re-measured. The nine flagged skills (`emails`,
+`cold-email`, `churn-prevention`, `referrals`, `community-marketing`,
+`launch`, `lead-magnets`, `free-tools`, `pricing`) are listed in
+`THIRD_PARTY_NOTICES.md` on that basis. Re-run the local line-level
+comparison against the installed claude-cowork marketing plugin before
+publishing Wave 4.
+
 ## Current Packaging Decision
 
-Waves 1-3 are published (`beb4539`, `a175f64`, `524472b`). Do not push
+Waves 1-3 are published (`beb4539`, `a175f64`, `524472b`). Wave 4 is
+packaged locally, pending provenance re-measurement and approval. Do not push
 future packaged skills until:
 
 - each skill has the shared context-loading block;
