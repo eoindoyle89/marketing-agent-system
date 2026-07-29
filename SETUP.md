@@ -20,6 +20,30 @@ You do not need to know GitHub before using this system. The
 9. Interviews you in stages.
 10. Writes durable context files that downstream marketing agents read.
 
+## Stage 1 Context Build
+
+After the information store exists, the setup agent builds the first usable
+marketing context.
+
+It will:
+
+1. Ask for your website and public-facing assets.
+2. Index public assets and files from `.agent-context/inbox/` in
+   `.agent-context/sources.md`.
+3. Summarize observed public messaging in
+   `.agent-context/public-asset-audit.md`.
+4. Show a source map before drafting canonical context.
+5. Interview you in stages instead of sending a giant questionnaire.
+6. Draft one context file at a time.
+7. Ask before promoting inferred facts.
+8. Put public-facing claims in `.agent-context/proof-points.md` with source,
+   status, allowed wording, and forbidden overclaims.
+9. Store reusable case studies in `.agent-context/case-studies.md`.
+10. Write downstream read rules in `.agent-context/INDEX.md`.
+
+Public assets are treated as observations. They are not automatically approved
+company truth.
+
 ## Canonical Store
 
 The canonical source of truth is:

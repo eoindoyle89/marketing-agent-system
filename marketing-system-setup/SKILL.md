@@ -221,26 +221,196 @@ Next step:
 
 ## Stage 1: Build The Marketing Context
 
-Run this only after Stage 0 is complete.
+Run this only after Stage 0 is complete. Stage 1 turns raw source material,
+public assets, and user-confirmed answers into durable files under
+`.agent-context/`.
 
-1. Ask for the company website and key public assets.
-2. Read public assets and write observed messaging to `public-asset-audit.md`.
-3. Read `.agent-context/inbox/`.
-4. Build `sources.md`.
-5. Interview the user in stages:
-   - company and product basics;
-   - positioning and ICP;
-   - brand voice and anti-AI writing rules;
-   - proof points;
-   - case studies;
-   - channel rules;
-   - QA and approval policy.
-6. Draft one context file at a time.
-7. Ask confirmation questions before promoting inferred facts.
-8. Mark claims as `Approved`, `Use With Boundary`, `Unverified`,
-   `Contradicted`, or `Retired`.
-9. Write `INDEX.md` routing rules for downstream agents.
-10. Produce setup summary and open questions.
+### Step 1.1: Verify Readiness
+
+Before gathering context, verify:
+
+- `.agent-context/` exists;
+- `INDEX.md`, `sources.md`, `company-context.md`,
+  `positioning-and-icp.md`, `brand-voice.md`,
+  `anti-ai-writing-rules.md`, `proof-points.md`, `case-studies.md`,
+  `public-asset-audit.md`, `channel-rules.md`, `qa-policy.md`,
+  `campaign-history.md`, `open-questions.md`, and `changelog.md` exist;
+- `inbox/` and `attachments/` exist;
+- the user has either added files to `inbox/` or explicitly chosen to start
+  from public assets only.
+
+If any required file is missing, recreate it from the template before
+continuing. If the user has not added sources and has not approved
+public-assets-only setup, stop and ask them to choose.
+
+### Step 1.2: Collect Public Assets
+
+Ask for the company's:
+
+- primary website URL;
+- product, pricing, case study, blog, resources, and about pages;
+- LinkedIn company page and founder/executive profiles, if relevant;
+- YouTube, podcast, webinar, newsletter, or community pages, if relevant;
+- competitor names or comparison pages, if already known.
+
+Ask only for the assets the user knows. Do not make the user find everything.
+If browsing is available, discover obvious public pages from the primary
+website and ask before treating them as in-scope.
+
+### Step 1.3: Audit Public Assets
+
+For every public asset reviewed:
+
+1. Add a row to `sources.md` with a stable source ID, source type, location,
+   date accessed, and reliability `Public`.
+2. Write only observed public messaging to `public-asset-audit.md`.
+3. Separate observations into:
+   - observed positioning;
+   - observed ICP;
+   - observed proof;
+   - offers and calls to action;
+   - channel patterns;
+   - contradictions or gaps;
+   - needs user confirmation.
+
+Do not copy long passages from public pages. Summarize and use short excerpts
+only when wording itself matters.
+
+### Step 1.4: Read The Inbox
+
+Read `.agent-context/inbox/` after the user confirms files are present.
+
+For every file:
+
+- add a row to `sources.md`;
+- record file path, type, date accessed, and reliability;
+- prefer `Primary` for company-owned internal documents;
+- use `User-confirmed` only for direct answers or corrections from the user;
+- use `Stale` when the source appears outdated;
+- use `Unverified` when provenance is unclear.
+
+If a file cannot be read, add it to `open-questions.md` with the reason and
+ask the user how to handle it.
+
+### Step 1.5: Build A Source Map Before Drafting
+
+Before writing context files, produce a short source map in the chat:
+
+```text
+Source map:
+- Strong sources:
+- Public-only sources:
+- Stale or unclear sources:
+- Missing sources:
+- Biggest contradictions:
+```
+
+Then ask the user what looks wrong or missing. Do not draft canonical context
+until the source map has been shown.
+
+### Step 1.6: Interview In Stages
+
+Interview the user one section at a time. Ask 2-5 questions per stage, then
+summarize what you heard and ask what needs correcting before moving on.
+
+Use this order:
+
+1. Company and product basics.
+2. Positioning and ICP.
+3. Brand voice, banned brand terms, and anti-AI writing rules.
+4. Proof points and claim boundaries.
+5. Case studies.
+6. Channel rules.
+7. QA and approval policy.
+
+Ask for examples and exact customer language whenever possible. If the user
+does not know an answer, record it in `open-questions.md`; do not fill the gap
+from model memory.
+
+### Step 1.7: Draft Context Files One At A Time
+
+Draft each file from source-backed observations and user-confirmed answers.
+
+Use this file routing:
+
+- `company-context.md`: company overview, product, market, business model,
+  goals, and operating context.
+- `positioning-and-icp.md`: category, ICP, personas, pains, alternatives,
+  differentiation, switching dynamics, objections, anti-personas.
+- `brand-voice.md`: voice principles, tone range, words to use, brand-specific
+  banned terms, terminology, examples.
+- `anti-ai-writing-rules.md`: generic anti-AI writing rules, model-output tells,
+  revision checks, and a pointer to brand-specific banned terms in
+  `brand-voice.md`.
+- `proof-points.md`: claim ledger with source ID, status, allowed wording, and
+  forbidden overclaim.
+- `case-studies.md`: reusable case studies that reference proof point IDs and
+  source IDs.
+- `channel-rules.md`: channel-specific constraints, formats, audience, cadence,
+  and approval needs.
+- `qa-policy.md`: review gates, approvers, publishing restrictions, risk checks,
+  and escalation rules.
+- `campaign-history.md`: previous campaigns, learnings, assets, performance,
+  and status.
+- `open-questions.md`: unresolved gaps, owner, needed source, and next action.
+- `INDEX.md`: routing rules for downstream agents.
+
+After each file draft, ask the user to approve, correct, or mark sections as
+unknown. Save corrected content before starting the next file.
+
+### Step 1.8: Promote Claims Safely
+
+Use `proof-points.md` as the only place where public-facing claims are
+approved.
+
+For every claim, require:
+
+- stable claim ID;
+- exact claim;
+- source ID;
+- status;
+- allowed wording;
+- boundary or forbidden overclaim.
+
+Never promote a claim from `Unverified` to `Approved` without explicit user
+confirmation. If public assets and internal sources conflict, mark the claim
+`Contradicted` and add the contradiction to `open-questions.md`.
+
+### Step 1.9: Write Downstream Routing Rules
+
+Update `INDEX.md` so downstream agents know what to read:
+
+- all drafting agents read `company-context.md`, `positioning-and-icp.md`,
+  `brand-voice.md`, `anti-ai-writing-rules.md`, `proof-points.md`,
+  `channel-rules.md`, and `qa-policy.md`;
+- case-study or proof-heavy work reads `case-studies.md`;
+- campaign planning reads `campaign-history.md`;
+- agents may use only `Approved` claims, or `Use With Boundary` claims inside
+  the stated boundary;
+- agents must route missing facts to `open-questions.md`;
+- no agent may publish, send, submit, or externally act without explicit human
+  approval.
+
+### Step 1.10: Finish With A Setup Summary
+
+End Stage 1 with:
+
+```text
+STAGE 1 STATUS: COMPLETE / WAIT / BLOCKED
+Store mode:
+Local path:
+Files updated:
+Sources indexed:
+Facts promoted:
+Approved claims:
+Use-with-boundary claims:
+Unverified or blocked claims:
+Open questions:
+Recommended next agent:
+```
+
+If command execution is available, show `git status` for the context repo. Ask
+before committing or pushing any company context changes.
 
 ## Claim Status Rules
 
