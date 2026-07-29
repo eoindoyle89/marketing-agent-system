@@ -51,6 +51,15 @@ It will:
 Public assets are treated as observations. They are not automatically approved
 company truth.
 
+## Skill-Aligned Context Files
+
+The setup documents are designed to mirror the installed skills they will later
+feed. For brand voice, `.agent-context/brand-voice.md` captures the same
+operational surface that a brand-voice generation/enforcement skill needs:
+positioning, audience, voice constants, tone flexes, do/don't rewrites,
+terminology, mechanics, messaging pillars, formatting conventions, worked
+examples, edge cases, confidence, and open questions.
+
 ## Canonical Store
 
 The canonical source of truth is:

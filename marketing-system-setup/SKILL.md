@@ -425,8 +425,12 @@ Use this file routing:
   goals, and operating context.
 - `positioning-and-icp.md`: category, ICP, personas, pains, alternatives,
   differentiation, switching dynamics, objections, anti-personas.
-- `brand-voice.md`: voice principles, tone range, words to use, brand-specific
-  banned terms, terminology, examples.
+- `brand-voice.md`: brand positioning/one-liner, audience and personas, voice
+  attributes, tone-shift map, do/don't rewrites, vocabulary and terminology,
+  grammar and mechanics, messaging pillars, formatting conventions, worked
+  examples, edge cases, confidence scores, and open questions. Mirror the
+  installed brand-voice skill model: voice constants, tone flexes, terminology,
+  examples, confidence, and enforceable open questions.
 - `anti-ai-writing-rules.md`: generic anti-AI writing rules, model-output tells,
   revision checks, and a pointer to brand-specific banned terms in
   `brand-voice.md`.
