@@ -59,25 +59,25 @@ context model.
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `customer-research` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `customer-research` | Context protocol wired; references copied; third-party notice added. |
-| `competitor-profiling` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; creates competitor artifacts outside `.agent-context`. |
-| `content-strategy` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `content-strategy` | Context protocol wired; references copied; third-party notice added. |
-| `copywriting` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `copywriting` | Context protocol wired; references copied; third-party notice added. |
-| `copy-editing` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `copy-editing` | Context protocol wired; references copied; third-party notice added. |
-| `social` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `social-content` | Context protocol wired; references copied; social-listening references made agent-neutral; third-party notice added. |
+| `customer-research` | Personal Vault | Published in `beb4539` | High overlap with Apache-2.0 installed `customer-research` | Context protocol wired; references copied; third-party notice added. |
+| `competitor-profiling` | Personal Vault | Published in `beb4539` | No direct installed match found | Context protocol wired; references copied; creates competitor artifacts outside `.agent-context`. |
+| `content-strategy` | Personal Vault | Published in `beb4539` | High overlap with Apache-2.0 installed `content-strategy` | Context protocol wired; references copied; third-party notice added. |
+| `copywriting` | Personal Vault | Published in `beb4539` | High overlap with Apache-2.0 installed `copywriting` | Context protocol wired; references copied; third-party notice added. |
+| `copy-editing` | Personal Vault | Published in `beb4539` | High overlap with Apache-2.0 installed `copy-editing` | Context protocol wired; references copied; third-party notice added. |
+| `social` | Personal Vault | Published in `beb4539` | High overlap with Apache-2.0 installed `social-content` | Context protocol wired; references copied; social-listening references made agent-neutral; third-party notice added. |
 
 ### Wave 2: Search And Distribution
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
-| `seo-audit` | Personal Vault | Not packaged | Similar to installed `seo-audit` | Requires careful references review. |
-| `ai-seo` | Personal Vault | Not packaged | Similar to installed `ai-seo` | Time-sensitive tactics and platform claims need review before publication. |
-| `site-architecture` | Personal Vault | Not packaged | Similar to installed `site-architecture` | Connect to public-asset audit and product capabilities. |
-| `programmatic-seo` | Personal Vault | Not packaged | Similar to installed `programmatic-seo` | Needs data-source and proof constraints. |
-| `schema` | Personal Vault | Not packaged | Similar to installed `schema-markup` | May remain technical and compact. |
-| `aso` | Personal Vault | Not packaged | No direct installed match found | App-store specs may be time-sensitive. |
-| `directory-submissions` | Personal Vault | Not packaged | No direct installed match found | Directory list needs provenance/currentness review. |
-| `competitors` | Personal Vault | Not packaged | Similar to installed `competitor-alternatives` | Use only approved competitive claims. |
+| `seo-audit` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `seo-audit` | Context protocol wired; references copied; third-party notice added. |
+| `ai-seo` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `ai-seo` | Context protocol wired; references copied; platform claims need currentness review before push. |
+| `site-architecture` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `site-architecture` | Context protocol wired; references copied; third-party notice added. |
+| `programmatic-seo` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `programmatic-seo` | Context protocol wired; references copied; third-party notice added. |
+| `schema` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `schema-markup` | Context protocol wired; references copied; third-party notice added. |
+| `aso` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; app-store specs and benchmarks need currentness review before push. |
+| `directory-submissions` | Personal Vault | Packaged locally, not published | No direct installed match found | Context protocol wired; references copied; directory list and AI-search claims need currentness review before push. |
+| `competitors` | Personal Vault | Packaged locally, not published | High overlap with Apache-2.0 installed `competitor-alternatives` | Context protocol wired; references copied; third-party notice added. |
 
 ### Wave 3: Paid, Conversion, And Measurement
 
@@ -154,3 +154,22 @@ The installed marketing plugin license observed locally is Apache-2.0. This repo
 now includes `THIRD_PARTY_NOTICES.md` and
 `LICENSES/Apache-2.0-Anthropic-Marketing.txt` so future publishing does not hide
 that provenance.
+
+## Wave 2 Provenance Review
+
+Local comparison against the installed Anthropic Cowork marketing plugin found
+high line-level overlap in six Wave 2 skills:
+
+| Skill | Installed comparison | Approximate shared non-empty lines |
+|---|---|---:|
+| `seo-audit` | `seo-audit` | 73% |
+| `ai-seo` | `ai-seo` | 73% |
+| `site-architecture` | `site-architecture` | 84% |
+| `programmatic-seo` | `programmatic-seo` | 83% |
+| `schema` | `schema-markup` | 75% |
+| `competitors` | `competitor-alternatives` | 79% |
+
+`aso` and `directory-submissions` had no direct installed skill match in the
+local comparison pass. Both still need currentness review because app-store
+specs, benchmark claims, directory availability, and AI-search behaviour can
+change.

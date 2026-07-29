@@ -18,6 +18,13 @@ architecture, shared read protocol, and company-context governance model.
   - `copywriting`
   - `copy-editing`
   - `social`
+- Adapted skills in Wave 2:
+  - `seo-audit`
+  - `ai-seo`
+  - `site-architecture`
+  - `programmatic-seo`
+  - `schema`
+  - `competitors`
 
 ## Original / No Direct Installed Match Found
 
@@ -25,6 +32,12 @@ The following Wave 1 skill did not have a direct installed Anthropic skill match
 in the local comparison pass:
 
 - `competitor-profiling`
+
+The following Wave 2 skills did not have a direct installed Anthropic skill
+match in the local comparison pass:
+
+- `aso`
+- `directory-submissions`
 
 This notice is based on the local plugin cache reviewed during packaging. It is
 not a legal opinion.
