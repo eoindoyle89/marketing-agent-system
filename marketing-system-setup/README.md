@@ -6,13 +6,14 @@ system.
 This skill exists because marketing agents should not rely on chat memory. It
 guides a user through creating or choosing a private GitHub-backed company
 context repo, cloning it locally or choosing a local fallback, creating
-`.agent-context/`, collecting source files, auditing public assets, and building
-source-backed context files.
+`.agent-context/`, selecting an accepted source pool, auditing public assets,
+and building source-backed context files.
 
 ## Use It When
 
 - A company is starting with `marketing-agent-system`.
-- A project needs durable brand, proof, case-study, and channel context.
+- A project needs durable company, product, customer, competitive, commercial,
+  measurement, brand, proof, case-study, channel, operations, or QA context.
 - Agents are producing generic or unsupported marketing output.
 - A team needs a shared context store before scaling production.
 
@@ -33,9 +34,19 @@ Stage 0 provisions the information store:
 Stage 1 builds the context:
 
 - read public assets;
-- read user-provided files;
+- show source-level public capture before presenting a confident public readout;
+- read user-provided files from `.agent-context/inbox/`, an Obsidian vault, a
+  local folder, a synced drive export, a system export, chat attachments, or
+  individual files;
 - create a source registry;
-- interview the user in stages;
+- present contradictions and a source map;
+- interview the user across eight staged context domains;
 - write context files;
-- mark claim status;
+- mark claim and approval status immediately when the user approves;
 - create routing rules for downstream agents.
+
+Detailed field contracts live in `references/context-schema.md`. The staged
+questions and file ownership rules live in `references/interview-guide.md`.
+The shared downstream read protocol lives in
+`../shared/context-read-protocol.md` and is referenced from generated
+`.agent-context/INDEX.md` files.

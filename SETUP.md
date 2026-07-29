@@ -16,11 +16,15 @@ You do not need to know GitHub before using this system. The
 5. Creates `.agent-context/inbox/` and `.agent-context/attachments/`.
 6. Verifies the folder structure.
 7. Audits your public website, social accounts, and public-facing assets first.
-8. Shows what the market can already see.
-9. Then asks for private/internal source material.
-10. Presents contradictions and information gaps.
-11. Interviews you in stages.
-12. Writes durable context files that downstream marketing agents read.
+8. Shows source-level public capture before giving a confident public summary.
+9. Shows what the market can already see.
+10. Then asks which private/internal source pool to use.
+11. Accepts `.agent-context/inbox/`, an existing Obsidian vault, a local
+    folder, synced drive export, system export, chat attachments, or individual
+    files.
+12. Presents contradictions and information gaps.
+13. Interviews you in stages.
+14. Writes durable context files that downstream marketing agents read.
 
 ## Stage 1 Context Build
 
@@ -33,20 +37,27 @@ It will:
 2. Index public assets in `.agent-context/sources.md`.
 3. Summarize observed public messaging in
    `.agent-context/public-asset-audit.md`.
-4. Show a public readout before requesting private/internal material.
-5. Ask you to add private/internal files to `.agent-context/inbox/`.
-6. Index private/internal files in `.agent-context/sources.md`.
-7. Present contradictions between public assets, private sources, and current
+4. Complete a source-capture gate so the readout does not sound more certain
+   than the evidence allows.
+5. Show a public readout before requesting private/internal material.
+6. Ask which private/internal source pool to use.
+7. Index private/internal files in `.agent-context/sources.md`.
+8. Present contradictions between public assets, private sources, and current
    context.
-8. Ask targeted questions to resolve high-risk gaps.
-9. Show a source map before drafting canonical context.
-10. Interview you in stages instead of sending a giant questionnaire.
-11. Draft one context file at a time.
-12. Ask before promoting inferred facts.
-13. Put public-facing claims in `.agent-context/proof-points.md` with source,
+9. Ask targeted questions to resolve high-risk gaps.
+10. Show a source map before drafting canonical context.
+11. Interview you across company/product, customer research, positioning,
+    competitors, offers/pricing, measurement, brand, proof, channels,
+    operations, campaign history, and QA instead of sending a giant
+    questionnaire.
+12. Draft one context domain at a time.
+13. Ask before promoting inferred facts.
+14. Record approvals immediately when you approve a file, section, claim, or
+    scoped output.
+15. Put public-facing claims in `.agent-context/proof-points.md` with source,
    status, allowed wording, and forbidden overclaims.
-14. Store reusable case studies in `.agent-context/case-studies.md`.
-15. Write downstream read rules in `.agent-context/INDEX.md`.
+16. Store reusable case studies in `.agent-context/case-studies.md`.
+17. Write downstream read rules in `.agent-context/INDEX.md`.
 
 Public assets are treated as observations. They are not automatically approved
 company truth.
@@ -54,11 +65,26 @@ company truth.
 ## Skill-Aligned Context Files
 
 The setup documents are designed to mirror the installed skills they will later
-feed. For brand voice, `.agent-context/brand-voice.md` captures the same
-operational surface that a brand-voice generation/enforcement skill needs:
-positioning, audience, voice constants, tone flexes, do/don't rewrites,
-terminology, mechanics, messaging pillars, formatting conventions, worked
-examples, edge cases, confidence, and open questions.
+feed.
+
+The context store covers:
+
+- company, product, capabilities, journey, positioning, ICP, and customer
+  research;
+- competitors, offers, pricing, goals, funnel definitions, measurement, and
+  campaign history;
+- brand voice, anti-AI writing rules, visual identity, channel rules, and
+  marketing operations;
+- proof points, case studies, QA policy, source provenance, approvals, and open
+  questions.
+
+Every task starts with `.agent-context/INDEX.md`, which routes the agent to the
+required and conditional files for that task.
+
+Downstream agents use the shared read contract in
+`shared/context-read-protocol.md`: read the index first, classify the task,
+load only the required context, check proof and approval boundaries, and report
+limits before any public-facing use.
 
 ## Canonical Store
 
@@ -69,6 +95,14 @@ The canonical source of truth is:
 ```
 
 Do not rely on AI chat memory as company truth.
+
+Raw source material can live wherever it is easiest and safest for the user:
+`.agent-context/inbox/`, an Obsidian vault, a local folder, a synced drive
+export, a system export, chat attachments, or individual files. The setup agent
+records the approved source pool and writes the distilled, approved context into
+`.agent-context/`. Chat attachments used as ongoing evidence should be copied
+locally or summarized with source IDs so future agents do not depend on chat
+memory.
 
 ## Optional Operations Layer
 
