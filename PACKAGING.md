@@ -159,13 +159,21 @@ owner decision as superseded by `marketing-system-setup`.
 
 Waves 1-5 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`,
 `a0ee1c9`); `product-marketing` was dropped as superseded. All packaging waves
-are complete. Do not push future packaged skills until:
+are complete. `context-update` is a new operating-layer skill created directly
+for this repo, not a packaged Personal Vault skill. Do not push future packaged
+or newly-created skills until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;
 - local references resolve;
 - provenance flags are reviewed and notices are retained;
 - the user approves publication.
+
+## Operating Layer
+
+| Skill | Source folder | Status | Provenance flag | Packaging notes |
+|---|---|---|---|---|
+| `context-update` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds source-first daily context updating after setup; accepts URLs, pasted text, attachments, files, folders, exports, and direct user statements; previews changes; updates `sources.md`, canonical context files, `proof-points.md`, `case-studies.md`, `INDEX.md`, and `changelog.md`; commits locally after approval; push still requires explicit approval. |
 
 ## Wave 1 Provenance Review
 

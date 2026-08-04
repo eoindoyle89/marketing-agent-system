@@ -1,8 +1,8 @@
 # marketing-agent-system
 
-A marketing-agent system: durable company context, a setup agent that builds
-it, 50 specialist marketing skills that read it, and QA gates that keep
-humans in charge of everything public-facing.
+A marketing-agent system: durable company context, setup and update agents
+that maintain it, 50 specialist marketing skills that read it, and QA gates
+that keep humans in charge of everything public-facing.
 
 The premise: AI chat memory is not company truth. Marketing agents produce
 generic or invented output when the facts they need — positioning, audience,
@@ -15,7 +15,8 @@ an architecture, not a prompt.
 sources (public + private)
         │
         ▼
-marketing-system-setup  ──►  .agent-context/   (private company store)
+marketing-system-setup
+context-update          ──►  .agent-context/   (private company store)
                                     │
                                     ▼
                      shared/context-read-protocol.md
@@ -33,6 +34,11 @@ marketing-system-setup  ──►  .agent-context/   (private company store)
   interviews the user in stages, and writes source-backed context files with
   claim status and approval metadata. Templates live in
   [`templates/agent-context/`](templates/agent-context/).
+- **`context-update`** keeps company context current after setup. It accepts
+  new sources in natural forms like URLs, pasted text, attachments, local
+  files, folders, exports, or direct user statements, classifies the update,
+  previews affected context files and claims, writes approved changes, records
+  `changelog.md`, and commits locally after approval.
 - **[`shared/context-read-protocol.md`](shared/context-read-protocol.md)** is
   the contract every downstream skill follows: read `.agent-context/INDEX.md`
   first, classify the task into a family, load only the required context,
@@ -49,7 +55,7 @@ marketing-system-setup  ──►  .agent-context/   (private company store)
 
 | Area | Skills |
 |---|---|
-| Setup & governance | marketing-system-setup |
+| Setup & governance | marketing-system-setup, context-update |
 | Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
 | Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
 | Paid, conversion & measurement | ads, ad-creative, ab-testing, analytics, cro, signup, onboarding, paywalls, popups |
