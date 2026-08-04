@@ -82,7 +82,7 @@ Do not show the full skill catalogue unless the user asks.
 | Production | User wants copy, creative, content, email, social, ads, PR, sales asset, video, or image brief | Relevant production skill, then review gate when available |
 | Review / QA | User wants critique or publish-readiness check | Relevant reviewer or specialist QA skill |
 | Measurement / learning | User wants tracking, results analysis, experiment design, or attribution | `analytics`, `ab-testing`, or task-specific measurement skill |
-| Marketing UX | User wants to improve the customer/prospect journey across touchpoints | `marketing-ux` when available, with `cro`, `onboarding`, `emails`, or other specialists as needed |
+| Marketing UX | User wants to improve the customer/prospect journey across touchpoints | `marketing-ux`, with `cro`, `onboarding`, `emails`, or other specialists as needed |
 
 ## Required Context Flow
 
@@ -183,7 +183,7 @@ secondary risks.
 | Decide what to do next | `marketing-plan` | `marketing-council`, `marketing-ideas`, specialist skills |
 | Generate growth ideas | `marketing-ideas` | `marketing-council`, `marketing-plan` |
 | Design a growth loop | `marketing-loops` | `referrals`, `community-marketing`, `free-tools`, `analytics` |
-| Improve the prospect/customer journey | `marketing-ux` when available | `cro`, `onboarding`, `emails`, `signup`, `paywalls` |
+| Improve the prospect/customer journey | `marketing-ux` | `cro`, `onboarding`, `emails`, `signup`, `paywalls` |
 | Research customers or VOC | `customer-research` | `copywriting`, `content-strategy`, `marketing-plan` |
 | Research competitors | `competitor-profiling` or `competitors` | `copywriting`, `seo-audit`, `sales-enablement` |
 | Build content strategy | `content-strategy` | `social`, `linkedin-article-ghostwriter`, `emails`, `seo-audit` |

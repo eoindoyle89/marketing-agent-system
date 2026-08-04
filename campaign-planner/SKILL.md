@@ -195,7 +195,7 @@ Classify the campaign before planning:
 | Partner campaign | Work involves a partner, integration, affiliate, or co-marketing | `co-marketing`, `public-relations`, `sales-enablement` |
 | Event campaign | Webinar, event, waitlist, or community moment | `emails`, `social`, `community-marketing`, `lead-magnets` |
 | Content campaign | Pillar asset, article series, newsletter theme, or content sprint | `content-strategy`, `social`, `emails`, `seo-audit` |
-| Conversion campaign | A journey or funnel path needs more action | `marketing-ux` when available, `cro`, `copywriting`, `ab-testing`, `analytics` |
+| Conversion campaign | A journey or funnel path needs more action | `marketing-ux`, `cro`, `copywriting`, `ab-testing`, `analytics` |
 
 ## Campaign Blueprint
 

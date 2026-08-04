@@ -1,8 +1,9 @@
 # marketing-agent-system
 
 A marketing-agent system: durable company context, setup, update, and
-orchestration agents that maintain it, 50 specialist marketing skills that read
-it, and QA gates that keep humans in charge of everything public-facing.
+orchestration agents that maintain it, a library of specialist marketing skills
+that read it, and QA gates that keep humans in charge of everything
+public-facing.
 
 The premise: AI chat memory is not company truth. Marketing agents produce
 generic or invented output when the facts they need — positioning, audience,
@@ -52,6 +53,10 @@ context-update          ──►  .agent-context/   (private company store)
   blueprint. It loads approved context, runs first-principles analysis of the
   real campaign job, asks only blocking questions, maps the journey, channels,
   assets, measurement, specialist handoffs, review gates, and human approvals.
+- **`marketing-ux`** improves the prospect, lead, customer, partner, or
+  community experience across marketing touchpoints. It diagnoses audience
+  state, friction, message continuity, CTAs, proof, handoffs, and measurement,
+  then routes full copy or implementation work to specialist skills.
 - **[`shared/context-read-protocol.md`](shared/context-read-protocol.md)** is
   the contract every downstream skill follows: read `.agent-context/INDEX.md`
   first, classify the task into a family, load only the required context,
@@ -69,7 +74,7 @@ context-update          ──►  .agent-context/   (private company store)
 | Area | Skills |
 |---|---|
 | Setup & governance | marketing-system-setup, context-update, marketing-orchestrator |
-| Campaign orchestration | campaign-planner |
+| Campaign orchestration | campaign-planner, marketing-ux |
 | Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
 | Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
 | Paid, conversion & measurement | ads, ad-creative, ab-testing, analytics, cro, signup, onboarding, paywalls, popups |
