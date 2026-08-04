@@ -7,13 +7,19 @@ public-facing.
 
 ## Start Here
 
-After setup, start every normal marketing request with:
+First time using this repo:
+
+```text
+Use start-here.
+```
+
+Already set up:
 
 ```text
 Use marketing-orchestrator. I want to [describe the marketing outcome].
 ```
 
-To bring back the day-to-day instructions any time, ask:
+Need help:
 
 ```text
 Use guide.
@@ -89,7 +95,7 @@ context-update          ──►  .agent-context/   (private company store)
 
 | Area | Skills |
 |---|---|
-| Setup & governance | guide, marketing-system-setup, context-update, marketing-orchestrator |
+| Setup & governance | start-here, guide, marketing-system-setup, context-update, marketing-orchestrator |
 | Campaign orchestration | campaign-planner, marketing-ux |
 | Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
 | Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
@@ -117,7 +123,7 @@ human approval. The reasoning behind the architecture is written up in
 Start with [SETUP.md](SETUP.md), then run the
 [`marketing-system-setup`](marketing-system-setup/) skill. You do not need to
 know GitHub first; the setup agent walks through every step and offers a
-local-only fallback.
+folder-in-Documents option.
 
 ## Principles
 

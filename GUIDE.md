@@ -1,8 +1,24 @@
-# Day-To-Day Guide
+# Guide
 
-Use this guide after the repo is installed and your company context store exists.
+Use this guide to choose the right starting point.
 
-If you are new, start here:
+## First Time
+
+```text
+Use start-here.
+```
+
+Use this if you have just installed the repo, pasted the repo URL into your AI,
+or do not yet have a company context store.
+
+`start-here` explains what the system is, who created it, how it works, and why
+setup comes first. It then routes into `marketing-system-setup`, the context
+gathering agent.
+
+## After Setup
+
+Once your company context store exists, start every normal marketing request
+with:
 
 ```text
 Use marketing-orchestrator. I want to [describe the marketing outcome].
@@ -16,8 +32,10 @@ Use guide.
 
 ## The Simple Rule
 
-Start with `marketing-orchestrator` unless you already know the exact skill you
-want.
+First time: use `start-here`.
+
+After setup: use `marketing-orchestrator` unless you already know the exact
+skill you want.
 
 You do not need to know the skill list, the `.agent-context/` file map, or which
 approval gate applies. The orchestrator figures out the route.

@@ -6,12 +6,18 @@ marketing context stored as Markdown under `.agent-context/`.
 You do not need to know GitHub before using this system. The
 `marketing-system-setup` skill is designed to guide you through each step.
 
+If this is your first time using the repo, start with:
+
+```text
+Use start-here.
+```
+
 ## What The Setup Agent Does
 
 1. Explains the information-store model.
 2. Helps you create or choose a private GitHub context repo.
-3. Helps clone it locally, or chooses a local-only fallback if GitHub is not
-   available yet.
+3. Helps clone it locally, or uses a folder in your Documents on your laptop if
+   GitHub is not available yet.
 4. Creates `.agent-context/`.
 5. Creates `.agent-context/inbox/` and `.agent-context/attachments/`.
 6. Verifies the folder structure.

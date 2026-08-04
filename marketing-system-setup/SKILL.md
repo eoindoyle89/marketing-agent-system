@@ -69,8 +69,17 @@ Explain:
   not own canonical positioning, claims, voice, case studies, or approval
   policy.
 
-Ask whether to create a private GitHub context repo, use an existing repo, or
-start with a local-only folder. Wait for the choice.
+Ask:
+
+```text
+How would you like to store your company context?
+
+1. Create a new private GitHub repo
+2. Use an existing private repo or folder
+3. Start with a folder that lives in your Documents on your laptop
+```
+
+Wait for the choice.
 
 ### Check Tooling And Choose A Route
 
@@ -87,7 +96,8 @@ Offer:
 - Agent-assisted GitHub CLI setup, with approval before creating, cloning,
   committing, or pushing.
 - Manual browser setup, with one checkpoint at a time.
-- Local-only fallback when GitHub is unavailable or unsuitable.
+- A folder in Documents on the user's laptop when GitHub is unavailable or
+  unsuitable.
 
 For GitHub, prefer a private repo named `<company>-marketing-context`. Stop and
 explain the risk if the user requests public visibility.
@@ -100,9 +110,9 @@ Ask where the local working copy should live. Use a simple default such as:
 ~/company-context/<repo-name>
 ```
 
-For a local fallback, record `Store mode: Local-only fallback` in
-`.agent-context/INDEX.md` and record the missing backup/collaboration layer in
-`open-questions.md`.
+For a folder in Documents on the user's laptop, record
+`Store mode: Local Documents folder` in `.agent-context/INDEX.md` and record
+the missing backup/collaboration layer in `open-questions.md`.
 
 ### Create The Context Structure
 
