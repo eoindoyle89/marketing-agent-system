@@ -159,10 +159,10 @@ owner decision as superseded by `marketing-system-setup`.
 
 Waves 1-5 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`,
 `a0ee1c9`); `product-marketing` was dropped as superseded. All packaging waves
-are complete. `context-update`, `marketing-orchestrator`, `campaign-planner`,
-and `marketing-ux` are new skills created directly for this repo, not packaged
-Personal Vault skills. Do not push future packaged or newly-created skills
-until:
+are complete. `guide`, `context-update`, `marketing-orchestrator`,
+`campaign-planner`, and `marketing-ux` are new skills created directly for this
+repo, not packaged Personal Vault skills. Do not push future packaged or
+newly-created skills until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;
@@ -174,10 +174,11 @@ until:
 
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
+| `guide` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds a recallable day-to-day usage guide prompt; points users to `marketing-orchestrator` as the default front door and summarizes direct-skill exceptions and approval boundaries. |
 | `context-update` | Created in repo | Published in `53a543d` | Original / no direct installed match found | Adds source-first daily context updating after setup; accepts URLs, pasted text, attachments, files, folders, exports, and direct user statements; previews changes; updates `sources.md`, canonical context files, `proof-points.md`, `case-studies.md`, `INDEX.md`, and `changelog.md`; commits locally after approval; push still requires explicit approval. |
 | `marketing-orchestrator` | Created in repo | Published in `aea0c9b` | Original / no direct installed match found | Adds the default front door for day-to-day marketing requests; classifies intent, reads the shared context protocol and `.agent-context/INDEX.md`, runs first-principles routing analysis, routes setup gaps to `marketing-system-setup`, routes fresh or stale company truth to `context-update`, selects the smallest useful specialist skill chain, routes campaign-shaped work to `campaign-planner`, routes journey/friction work to `marketing-ux`, sequences review gates, and preserves human approval boundaries. |
 | `campaign-planner` | Created in repo | Published in `039f4bd` | Original / no direct installed match found | Adds the campaign blueprint layer between `marketing-orchestrator` and specialist skills; loads approved context, runs first-principles campaign analysis before planning, asks only blocking questions, defines the campaign job, maps journey, channels, assets, specialist handoffs, measurement, review gates, and human approval checkpoints. |
-| `marketing-ux` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds the journey architecture layer for prospect, lead, customer, partner, and community experiences; loads approved context, runs first-principles journey diagnosis, maps current journeys, audits friction and message continuity, designs target journeys, creates specialist handoffs, defines measurement, and preserves implementation approval boundaries. |
+| `marketing-ux` | Created in repo | Published in `4aa68a9` | Original / no direct installed match found | Adds the journey architecture layer for prospect, lead, customer, partner, and community experiences; loads approved context, runs first-principles journey diagnosis, maps current journeys, audits friction and message continuity, designs target journeys, creates specialist handoffs, defines measurement, and preserves implementation approval boundaries. |
 
 ## Wave 1 Provenance Review
 

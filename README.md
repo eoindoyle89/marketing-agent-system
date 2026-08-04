@@ -5,6 +5,22 @@ orchestration agents that maintain it, a library of specialist marketing skills
 that read it, and QA gates that keep humans in charge of everything
 public-facing.
 
+## Start Here
+
+After setup, start every normal marketing request with:
+
+```text
+Use marketing-orchestrator. I want to [describe the marketing outcome].
+```
+
+To bring back the day-to-day instructions any time, ask:
+
+```text
+Use guide.
+```
+
+See [GUIDE.md](GUIDE.md) for the short usage guide.
+
 The premise: AI chat memory is not company truth. Marketing agents produce
 generic or invented output when the facts they need — positioning, audience,
 proof, voice, channel rules — live nowhere durable. This repo fixes that with
@@ -73,7 +89,7 @@ context-update          ──►  .agent-context/   (private company store)
 
 | Area | Skills |
 |---|---|
-| Setup & governance | marketing-system-setup, context-update, marketing-orchestrator |
+| Setup & governance | guide, marketing-system-setup, context-update, marketing-orchestrator |
 | Campaign orchestration | campaign-planner, marketing-ux |
 | Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
 | Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
@@ -90,9 +106,11 @@ Packaging status, provenance flags, and per-skill notes are tracked in
 [`examples/quietude/`](examples/quietude/) is a complete fictional example:
 a populated `.agent-context/` store and a
 [worked example](examples/quietude/worked-example.md) that follows one
-article from raw inputs through the ghostwriter, the review gate, and a
-recorded human approval. The reasoning behind the architecture is written up
-in [docs/why-durable-context.md](docs/why-durable-context.md).
+article from raw inputs through the ghostwriter, plus an operating-layer
+campaign flow through `marketing-orchestrator`, `context-update`,
+`campaign-planner`, `marketing-ux`, specialist handoffs, review gates, and
+human approval. The reasoning behind the architecture is written up in
+[docs/why-durable-context.md](docs/why-durable-context.md).
 
 ## Setup
 

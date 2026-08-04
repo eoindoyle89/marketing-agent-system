@@ -86,6 +86,18 @@ Downstream agents use the shared read contract in
 load only the required context, check proof and approval boundaries, and report
 limits before any public-facing use.
 
+After setup, return to [GUIDE.md](GUIDE.md). For day-to-day work, start with:
+
+```text
+Use marketing-orchestrator. I want to [describe the marketing outcome].
+```
+
+To bring the usage guide back in chat, ask:
+
+```text
+Use guide.
+```
+
 ## Canonical Store
 
 The canonical source of truth is:

@@ -45,8 +45,8 @@ boundary — "peer-reviewed research found measurable effects" is usable;
 what the ledger permits. The interesting result isn't what the example
 article says; it's what it *couldn't* say.
 
-**Skills are stateless; the store is the interface.** None of the 50
-specialist skills contain company facts. Each declares what context it
+**Skills are stateless; the store is the interface.** None of the specialist
+skills contain company facts. Each declares what context it
 reads and follows one shared protocol: index first, task family, required
 files, claim boundaries, report limitations. Change your positioning once
 in the store and every skill — copywriting, ads, SEO, lifecycle, the
@@ -69,7 +69,7 @@ are scoped and written to a changelog the moment they happen.
 - The [example store](../examples/quietude/.agent-context/) itself — the
   artifact everything else reads.
 - [`shared/context-read-protocol.md`](../shared/context-read-protocol.md)
-  — the contract that makes 50 skills behave like one system.
+  — the contract that makes the skill library behave like one system.
 
 Durable context is slower to set up than a clever prompt. It is also the
 difference between AI marketing output you have to police and AI marketing
