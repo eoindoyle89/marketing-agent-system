@@ -125,6 +125,9 @@ Start with [SETUP.md](SETUP.md), then run the
 know GitHub first; the setup agent walks through every step and offers a
 folder-in-Documents option.
 
+If the AI cannot complete setup automatically, use
+[SETUP-FALLBACK.md](SETUP-FALLBACK.md).
+
 ## Principles
 
 - Company truth lives in a durable store, never in chat memory.

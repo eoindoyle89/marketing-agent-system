@@ -35,6 +35,8 @@ day-to-day guide after setup. After setup, users should normally start with
 9. Route into `marketing-system-setup` and ask the first setup question.
 10. Do not create repos, folders, files, commits, or pushes without explicit
     approval.
+11. If setup automation is blocked, point the user to `SETUP-FALLBACK.md` and
+    continue one step at a time.
 
 ## First-Run Message
 
@@ -85,6 +87,15 @@ How would you like to store your company context?
 ```
 
 Wait for the user's choice before any setup action.
+
+If the AI cannot create folders, use GitHub, browse, or read files, say:
+
+```text
+No problem. We can use the manual fallback.
+
+Open SETUP-FALLBACK.md and follow the folder-in-Documents route, then come back
+and tell me where the folder is.
+```
 
 ## Route After The Choice
 

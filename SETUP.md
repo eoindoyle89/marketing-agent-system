@@ -12,6 +12,9 @@ If this is your first time using the repo, start with:
 Use start-here.
 ```
 
+If the AI cannot create folders, use GitHub, browse, or read files, use
+[SETUP-FALLBACK.md](SETUP-FALLBACK.md).
+
 ## What The Setup Agent Does
 
 1. Explains the information-store model.
@@ -128,3 +131,10 @@ Airtable, Notion, or another database can be added later for campaign calendars,
 content inventories, experiment backlogs, and production tracking. They should
 not own canonical positioning, proof points, case studies, brand voice, or
 approval policy.
+
+## Manual Fallback
+
+If setup cannot run automatically, use [SETUP-FALLBACK.md](SETUP-FALLBACK.md).
+It explains how to create a folder in Documents, use an existing folder or
+vault, attach documents in chat, recover when browsing fails, and resume setup
+from partial progress.
