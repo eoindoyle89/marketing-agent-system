@@ -1,8 +1,8 @@
 # marketing-agent-system
 
-A marketing-agent system: durable company context, setup and update agents
-that maintain it, 50 specialist marketing skills that read it, and QA gates
-that keep humans in charge of everything public-facing.
+A marketing-agent system: durable company context, setup, update, and
+orchestration agents that maintain it, 50 specialist marketing skills that read
+it, and QA gates that keep humans in charge of everything public-facing.
 
 The premise: AI chat memory is not company truth. Marketing agents produce
 generic or invented output when the facts they need — positioning, audience,
@@ -17,6 +17,9 @@ sources (public + private)
         ▼
 marketing-system-setup
 context-update          ──►  .agent-context/   (private company store)
+                                    │
+                                    ▼
+                         marketing-orchestrator
                                     │
                                     ▼
                      shared/context-read-protocol.md
@@ -39,6 +42,12 @@ context-update          ──►  .agent-context/   (private company store)
   files, folders, exports, or direct user statements, classifies the update,
   previews affected context files and claims, writes approved changes, records
   `changelog.md`, and commits locally after approval.
+- **`marketing-orchestrator`** is the default front door for day-to-day
+  marketing work. It classifies messy requests, checks `.agent-context/`,
+  routes new or stale company truth through `context-update`, selects the
+  smallest useful specialist skill chain, sequences review gates, and stops
+  before publishing, sending, spending, contacting, claim approval, or live
+  system changes.
 - **[`shared/context-read-protocol.md`](shared/context-read-protocol.md)** is
   the contract every downstream skill follows: read `.agent-context/INDEX.md`
   first, classify the task into a family, load only the required context,
@@ -55,7 +64,7 @@ context-update          ──►  .agent-context/   (private company store)
 
 | Area | Skills |
 |---|---|
-| Setup & governance | marketing-system-setup, context-update |
+| Setup & governance | marketing-system-setup, context-update, marketing-orchestrator |
 | Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
 | Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
 | Paid, conversion & measurement | ads, ad-creative, ab-testing, analytics, cro, signup, onboarding, paywalls, popups |
