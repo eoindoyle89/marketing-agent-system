@@ -44,10 +44,10 @@ context-update          ──►  .agent-context/   (private company store)
   `changelog.md`, and commits locally after approval.
 - **`marketing-orchestrator`** is the default front door for day-to-day
   marketing work. It classifies messy requests, checks `.agent-context/`,
-  routes new or stale company truth through `context-update`, selects the
-  smallest useful specialist skill chain, sequences review gates, and stops
-  before publishing, sending, spending, contacting, claim approval, or live
-  system changes.
+  runs first-principles routing analysis, routes new or stale company truth
+  through `context-update`, selects the smallest useful specialist skill chain,
+  sequences review gates, and stops before publishing, sending, spending,
+  contacting, claim approval, or live system changes.
 - **`campaign-planner`** turns campaign-shaped requests into a campaign
   blueprint. It loads approved context, runs first-principles analysis of the
   real campaign job, asks only blocking questions, maps the journey, channels,

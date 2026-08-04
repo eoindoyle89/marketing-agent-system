@@ -5,10 +5,11 @@ description: >
   asks for a marketing outcome but has not named the exact specialist skill, or
   when a request may involve context updates, strategy, production, review, or a
   multi-step campaign. Read the durable `.agent-context/` store, classify the
-  request, route new or stale company truth to `context-update`, select the
-  smallest useful skill chain, sequence work, enforce review gates, and stop
-  before publishing, sending, spending, contacting, approving claims, or changing
-  live systems.
+  request, run a first-principles routing analysis of the task and deliverable,
+  route new or stale company truth to `context-update`, select the smallest
+  useful skill chain, sequence work, enforce review gates, and stop before
+  publishing, sending, spending, contacting, approving claims, or changing live
+  systems.
 ---
 
 # Marketing Orchestrator
@@ -27,20 +28,21 @@ skills, review gates, and human approvals.
    strategy, review, or analysis work.
 3. Locate and read `.agent-context/INDEX.md` before using company facts.
 4. If no context store exists, route the user to `marketing-system-setup`.
-5. If the user provides new company information, a new source, an approval, a
+5. Run first-principles routing analysis before choosing specialist skills.
+6. If the user provides new company information, a new source, an approval, a
    contradiction, or a freshness issue, route through `context-update` before
    downstream production.
-6. Select the smallest useful skill chain. Do not run a council or campaign
+7. Select the smallest useful skill chain. Do not run a council or campaign
    workflow when one specialist skill is enough.
-7. Ask only for information that blocks the next safe step.
-8. For public-facing work, include brand voice, anti-AI rules, channel rules,
+8. Ask only for information that blocks the next safe step.
+9. For public-facing work, include brand voice, anti-AI rules, channel rules,
    proof points, and QA policy through the shared context protocol.
-9. Route public-facing drafts through the relevant review gate when one exists.
-10. Do not publish, send, submit, spend, contact, approve claims, or change live
+10. Route public-facing drafts through the relevant review gate when one exists.
+11. Do not publish, send, submit, spend, contact, approve claims, or change live
     systems.
-11. Do not create or update resume, CV, job-application, or personal
+12. Do not create or update resume, CV, job-application, or personal
     career-document material in this system.
-12. Do not push commits unless the user explicitly approves a push.
+13. Do not push commits unless the user explicitly approves a push.
 
 ## Intake UX
 
@@ -90,13 +92,60 @@ Do not show the full skill catalogue unless the user asks.
 4. Classify the request into a task family.
 5. Read only the context files required by the index and the selected route.
 6. Build a task-local context ledger.
-7. Decide:
+7. Run first-principles routing analysis.
+8. Decide:
    - `BLOCKED`: missing or conflicted context would make the output unsafe,
      misleading, off-brand, or unusable.
    - `PROCEED WITH LIMITATIONS`: the output is useful if risky claims are
      omitted and assumptions are labelled.
    - `PROCEED`: context is sufficient.
-8. If context needs to change, use `context-update` before production.
+9. If context needs to change, use `context-update` before production.
+
+## First-Principles Routing Analysis
+
+Before selecting specialist skills, decompose the user's request.
+
+Identify:
+
+- stated request;
+- real task or deliverable needed now;
+- underlying business outcome;
+- audience or stakeholder whose behaviour, belief, decision, or work needs to
+  change;
+- current blocker: missing context, awareness, comprehension, trust, proof,
+  urgency, offer, channel fit, conversion friction, lifecycle gap,
+  measurement gap, operational capacity, approval, or compliance;
+- output type: setup, context update, strategy, campaign plan, specialist
+  production, review, measurement, marketing UX, or multi-step workflow;
+- minimum safe specialist skill chain;
+- review and approval gates;
+- blocking questions, if any.
+
+Use this compact structure internally and show it when it materially helps the
+user understand the route:
+
+```text
+ROUTING ANALYSIS
+
+Stated request:
+Real deliverable:
+Underlying outcome:
+Audience / stakeholder:
+Primary blocker:
+Output type:
+Minimum useful skill chain:
+Review gates:
+Approval gates:
+Blocking questions:
+```
+
+Do not let the routing table override the analysis. The table is a guide; the
+analysis decides whether the user needs one specialist, `context-update`,
+`campaign-planner`, `marketing-ux`, a review gate, or a short sequence.
+
+Ask questions before routing only when the missing answer changes the safe next
+step. If the route can proceed safely with labelled assumptions, proceed with
+limitations instead of interrogating the user.
 
 ## Automatic Context-Update Triggers
 
@@ -236,12 +285,13 @@ Use these states when work spans multiple steps:
 
 1. `Intake`
 2. `Context Check`
-3. `Context Update` when needed
-4. `Route Preview`
-5. `Specialist Work`
-6. `Review Gate`
-7. `Human Approval`
-8. `Complete`
+3. `Routing Analysis`
+4. `Context Update` when needed
+5. `Route Preview`
+6. `Specialist Work`
+7. `Review Gate`
+8. `Human Approval`
+9. `Complete`
 
 For simple one-skill tasks, collapse the states and move quickly.
 
