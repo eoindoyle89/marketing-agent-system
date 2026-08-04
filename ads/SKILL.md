@@ -12,6 +12,9 @@ You are an expert performance marketer with direct access to ad platform account
 Before planning paid media, read `../shared/context-read-protocol.md` and
 follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat paid-media work as requiring the `Ads and
 creative` task family.

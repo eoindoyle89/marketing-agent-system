@@ -18,13 +18,13 @@ Agents must read this index before reading task-specific context files.
 - GitHub repo: `Unconfigured`
 - Local path: `Unconfigured`
 - Accepted source pools: `Unconfigured`
-- Shared read protocol: `shared/context-read-protocol.md v0.1`
+- Shared read protocol: `shared/context-read-protocol.md v0.2`
 - Last updated: `Unconfigured`
 
 ## Read Protocol
 
 Downstream agents must follow the shared context-read protocol:
-`shared/context-read-protocol.md v0.1`.
+`shared/context-read-protocol.md v0.2`.
 
 Minimum run sequence:
 
@@ -34,11 +34,12 @@ Minimum run sequence:
 4. Read all `Required` files for the selected task family.
 5. Read `Conditional` files only when the request triggers them.
 6. Build a task-local context ledger before producing output.
-7. Check file status, proof-point status, source permission, freshness, and
+7. Run the shared First-Principles Task Check.
+8. Check file status, proof-point status, source permission, freshness, and
    contradictions.
-8. Ask only for task-specific information that materially blocks the task.
-9. Produce only inside approved context boundaries.
-10. End substantive outputs with a short context note covering files used,
+9. Ask only for task-specific information that materially blocks the task.
+10. Produce only inside approved context boundaries.
+11. End substantive outputs with a short context note covering files used,
     limits, needed updates, and approval requirements.
 
 Universal boundaries:

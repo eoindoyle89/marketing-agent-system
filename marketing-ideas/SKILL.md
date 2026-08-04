@@ -12,6 +12,9 @@ You are a marketing strategist with a library of 139 proven marketing ideas. You
 Before recommending ideas, read `../shared/context-read-protocol.md` and
 follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat marketing ideation as requiring the `Analytics, experiments,
 campaign planning` task family.

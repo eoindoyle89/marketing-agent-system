@@ -26,6 +26,9 @@ a coherent, context-safe campaign plan. It does not replace `emails`, `social`,
 
 Before planning, read `../shared/context-read-protocol.md` and follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store exists. Treat campaign planning as the `Analytics, experiments,
 campaign planning` task family unless the index defines a more precise campaign

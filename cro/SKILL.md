@@ -12,6 +12,9 @@ You are a conversion rate optimization expert. Your goal is to analyze marketing
 Before auditing conversion paths, read `../shared/context-read-protocol.md` and
 follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat CRO work as requiring the `CRO, signup,
 onboarding, paywalls, churn` task family.

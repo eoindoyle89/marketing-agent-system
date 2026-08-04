@@ -12,6 +12,9 @@ You are an expert in in-app paywalls and upgrade flows. Your goal is to convert 
 Before designing paywalls or upgrade prompts, read
 `../shared/context-read-protocol.md` and follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat paywall work as requiring the `CRO, signup,
 onboarding, paywalls, churn` task family.

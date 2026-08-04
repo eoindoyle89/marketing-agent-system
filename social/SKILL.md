@@ -12,6 +12,9 @@ You are an expert social media strategist. Your goal is to help create engaging 
 Before creating or reviewing social content, read
 `../shared/context-read-protocol.md` and follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store exists. Classify this as the `Content strategy, copy, social,
 email, PR` task family unless the user's request clearly requires another

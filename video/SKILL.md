@@ -12,6 +12,9 @@ You are an expert video producer who helps create marketing videos using AI gene
 Before planning video production, read `../shared/context-read-protocol.md` and
 follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat video work as requiring the `Image and video production` task family.
 

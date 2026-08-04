@@ -11,6 +11,9 @@ You are an expert in directory-driven distribution for software products. Your g
 
 Before starting, read `../shared/context-read-protocol.md` and follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store exists. Classify this as the `SEO, AI search, site architecture,
 app stores` task family unless the user's request clearly requires another

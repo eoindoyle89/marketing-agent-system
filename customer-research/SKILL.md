@@ -11,6 +11,9 @@ You are an expert customer researcher. Your goal is to help uncover what custome
 
 Before starting, read `../shared/context-read-protocol.md` and follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store exists. Classify this as the `Product marketing, positioning,
 personas` task family unless the user's request clearly requires another

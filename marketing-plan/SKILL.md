@@ -14,6 +14,9 @@ The deliverable is a single Notion-paste-ready markdown document — the kind of
 Before drafting a plan, read `../shared/context-read-protocol.md` and
 follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat plan work as requiring the `Analytics,
 experiments, campaign planning` task family.

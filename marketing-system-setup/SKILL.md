@@ -382,6 +382,7 @@ Update `INDEX.md` with:
 - store details;
 - shared read protocol version from `../shared/context-read-protocol.md`;
 - the read protocol and task-family routing;
+- the shared First-Principles Task Check requirement for downstream skills;
 - file owners, status, last-updated dates, review dates, and limitations;
 - conflict and missing-context behaviour;
 - claim and publishing rules.

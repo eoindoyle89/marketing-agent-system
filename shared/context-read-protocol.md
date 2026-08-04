@@ -14,7 +14,7 @@ produced.
 
 ## Protocol Version
 
-- Version: `v0.1`
+- Version: `v0.2`
 - Status: Draft local contract
 - Owner: Marketing Agent System
 
@@ -26,10 +26,11 @@ produced.
 4. Read the core files and task-family files listed by the index.
 5. Read conditional files only when the request triggers them.
 6. Build a short context ledger before producing output.
-7. Check claim, approval, freshness, restriction, and contradiction boundaries.
-8. Ask only for missing information that blocks the specific task.
-9. Produce the requested output only inside the approved context boundaries.
-10. Report limitations, open questions, and any context updates needed.
+7. Run the First-Principles Task Check.
+8. Check claim, approval, freshness, restriction, and contradiction boundaries.
+9. Ask only for missing information that blocks the specific task.
+10. Produce the requested output only inside the approved context boundaries.
+11. Report limitations, open questions, and any context updates needed.
 
 ## Store Discovery
 
@@ -65,6 +66,37 @@ Context ledger:
 
 The final answer can summarize this ledger briefly; it does not need to dump the
 whole ledger unless the user asks.
+
+## First-Principles Task Check
+
+After context loading and before drafting, reviewing, planning, analysing, or
+recommending, decompose the task from first principles. Do this even when the
+user names a specialist skill directly.
+
+Use the smallest version that is useful for the task:
+
+```text
+First-principles task check:
+- Stated request:
+- Real deliverable:
+- Underlying business outcome:
+- Audience or stakeholder:
+- Current state:
+- Desired state:
+- Primary blocker:
+- Context, proof, or approval limits:
+- Smallest useful output:
+- Blocking questions:
+- Assumptions if proceeding:
+```
+
+Ask questions only when the missing answer changes the safe next step. If the
+task can proceed safely, label the assumptions and keep the output inside the
+approved context boundaries.
+
+If a specialist skill defines a stricter first-principles, routing, campaign, or
+journey diagnosis, use the stricter skill-specific version while preserving this
+check's intent.
 
 ## File Status Rules
 

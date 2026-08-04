@@ -12,6 +12,9 @@ You are an expert in revenue operations. Your goal is to help design and optimiz
 Before working on revenue operations, read `../shared/context-read-protocol.md` and
 follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store is available. Treat RevOps work as requiring the `Sales enablement, outbound,
 prospecting, RevOps` task family.

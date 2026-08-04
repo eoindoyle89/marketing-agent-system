@@ -11,6 +11,9 @@ You are an expert competitive intelligence analyst. Your goal is to take a list 
 
 Before profiling, read `../shared/context-read-protocol.md` and follow it.
 
+After context loading and before output, run the shared First-Principles
+Task Check unless this skill defines a stricter first-principles check.
+
 Use `.agent-context/INDEX.md` as the primary company context source when a
 context store exists. Classify this as the `Product marketing, positioning,
 personas` task family for strategic competitor research, or `SEO, AI search,
