@@ -48,6 +48,10 @@ context-update          ──►  .agent-context/   (private company store)
   smallest useful specialist skill chain, sequences review gates, and stops
   before publishing, sending, spending, contacting, claim approval, or live
   system changes.
+- **`campaign-planner`** turns campaign-shaped requests into a campaign
+  blueprint. It loads approved context, runs first-principles analysis of the
+  real campaign job, asks only blocking questions, maps the journey, channels,
+  assets, measurement, specialist handoffs, review gates, and human approvals.
 - **[`shared/context-read-protocol.md`](shared/context-read-protocol.md)** is
   the contract every downstream skill follows: read `.agent-context/INDEX.md`
   first, classify the task into a family, load only the required context,
@@ -65,6 +69,7 @@ context-update          ──►  .agent-context/   (private company store)
 | Area | Skills |
 |---|---|
 | Setup & governance | marketing-system-setup, context-update, marketing-orchestrator |
+| Campaign orchestration | campaign-planner |
 | Foundation & research | customer-research, competitor-profiling, content-strategy, copywriting, copy-editing, social |
 | Search & distribution | seo-audit, ai-seo, site-architecture, programmatic-seo, schema, aso, directory-submissions, competitors |
 | Paid, conversion & measurement | ads, ad-creative, ab-testing, analytics, cro, signup, onboarding, paywalls, popups |

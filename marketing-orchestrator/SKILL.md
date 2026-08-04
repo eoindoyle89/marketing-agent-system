@@ -75,7 +75,7 @@ Do not show the full skill catalogue unless the user asks.
 | Setup | No durable context store exists, or the store is broken | `marketing-system-setup` |
 | Context update | New source, fact, approval, contradiction, or freshness issue | `context-update` |
 | Single specialist task | One clear output such as a post review, SEO audit, or email draft | Relevant specialist skill |
-| Campaign-shaped task | Goal requires multiple coordinated channels or assets | `campaign-planner` when available, then specialists |
+| Campaign-shaped task | Goal requires multiple coordinated channels or assets | `campaign-planner`, then specialists |
 | Strategy / planning | User wants direction, priorities, positioning, ideas, or plan | `marketing-plan`, `marketing-ideas`, `marketing-council`, or specialist strategy skill |
 | Production | User wants copy, creative, content, email, social, ads, PR, sales asset, video, or image brief | Relevant production skill, then review gate when available |
 | Review / QA | User wants critique or publish-readiness check | Relevant reviewer or specialist QA skill |
@@ -129,7 +129,7 @@ secondary risks.
 |---|---|---|
 | Set up company context | `marketing-system-setup` | None until setup completes |
 | Add or approve new company information | `context-update` | Relevant specialist after update |
-| Plan a coordinated campaign | `campaign-planner` when available | `content-strategy`, `emails`, `social`, `ads`, `cro`, `public-relations`, review gates |
+| Plan a coordinated campaign | `campaign-planner` | `content-strategy`, `emails`, `social`, `ads`, `cro`, `public-relations`, review gates |
 | Launch a product, feature, market, or offer | `launch` | `campaign-planner`, `emails`, `social`, `ads`, `public-relations`, `sales-enablement` |
 | Decide what to do next | `marketing-plan` | `marketing-council`, `marketing-ideas`, specialist skills |
 | Generate growth ideas | `marketing-ideas` | `marketing-council`, `marketing-plan` |
@@ -181,30 +181,25 @@ secondary risks.
 
 ## Campaign-Planner Pairing
 
-`campaign-planner` is a planned sibling, not part of this skill.
+`campaign-planner` is a sibling planning skill, not part of this skill.
 
 Use `campaign-planner` when the request requires a coordinated campaign brief
 across goals, audience, offer, proof, channels, timeline, budget, measurement,
 dependencies, and approval checkpoints.
 
-Until `campaign-planner` exists, create a lightweight campaign route yourself:
+Route campaign-shaped requests to `campaign-planner`, then use its specialist
+handoffs to continue execution:
 
 ```text
-CAMPAIGN ROUTE
-
-Goal:
-Audience:
-Offer / action:
-Proof available:
-Channels:
-Assets needed:
-Risks / missing context:
-Specialist skill sequence:
-Review gates:
-Human approvals:
+marketing-orchestrator
+  -> context-update if needed
+  -> campaign-planner
+  -> specialist skills
+  -> review gates
+  -> human approval
 ```
 
-Then continue only as far as the current approval and context boundaries allow.
+Continue only as far as the current approval and context boundaries allow.
 
 ## Review Gate Routing
 

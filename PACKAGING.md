@@ -159,9 +159,10 @@ owner decision as superseded by `marketing-system-setup`.
 
 Waves 1-5 are published (`beb4539`, `a175f64`, `524472b`, `1345fb5`,
 `a0ee1c9`); `product-marketing` was dropped as superseded. All packaging waves
-are complete. `context-update` and `marketing-orchestrator` are new
-operating-layer skills created directly for this repo, not packaged Personal
-Vault skills. Do not push future packaged or newly-created skills until:
+are complete. `context-update`, `marketing-orchestrator`, and
+`campaign-planner` are new skills created directly for this repo, not packaged
+Personal Vault skills. Do not push future packaged or newly-created skills
+until:
 
 - each skill has the shared context-loading block;
 - private/vault-specific references are removed;
@@ -174,7 +175,8 @@ Vault skills. Do not push future packaged or newly-created skills until:
 | Skill | Source folder | Status | Provenance flag | Packaging notes |
 |---|---|---|---|---|
 | `context-update` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds source-first daily context updating after setup; accepts URLs, pasted text, attachments, files, folders, exports, and direct user statements; previews changes; updates `sources.md`, canonical context files, `proof-points.md`, `case-studies.md`, `INDEX.md`, and `changelog.md`; commits locally after approval; push still requires explicit approval. |
-| `marketing-orchestrator` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds the default front door for day-to-day marketing requests; classifies intent, reads the shared context protocol and `.agent-context/INDEX.md`, routes setup gaps to `marketing-system-setup`, routes fresh or stale company truth to `context-update`, selects the smallest useful specialist skill chain, pairs campaign-shaped work with future `campaign-planner`, sequences review gates, and preserves human approval boundaries. |
+| `marketing-orchestrator` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds the default front door for day-to-day marketing requests; classifies intent, reads the shared context protocol and `.agent-context/INDEX.md`, routes setup gaps to `marketing-system-setup`, routes fresh or stale company truth to `context-update`, selects the smallest useful specialist skill chain, routes campaign-shaped work to `campaign-planner`, sequences review gates, and preserves human approval boundaries. |
+| `campaign-planner` | Created in repo | Packaged locally, not published | Original / no direct installed match found | Adds the campaign blueprint layer between `marketing-orchestrator` and specialist skills; loads approved context, runs first-principles campaign analysis before planning, asks only blocking questions, defines the campaign job, maps journey, channels, assets, specialist handoffs, measurement, review gates, and human approval checkpoints. |
 
 ## Wave 1 Provenance Review
 
